@@ -1,0 +1,29 @@
+@import "variables.scss";
+
+body {
+  margin: 0;
+  font-family: "Raleway", "Verdana", "Arial", "Tahoma", sans-serif;
+  font-size: 25px;
+  font-weight: normal;
+  line-height: 1.29;
+  color: $main-color;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
