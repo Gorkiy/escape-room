@@ -1,0 +1,30 @@
+.menu {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.menu__link {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #f0f0f0;
+}
+
+.menu__link:hover {
+  color: $accent-color;
+}
+
+@media (max-width: $mobile-width) {
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
+
+  .menu__item {
+    margin-bottom: 37px;
+  }
+}

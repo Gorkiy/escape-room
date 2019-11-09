@@ -1,0 +1,128 @@
+.main-nav__list {
+  @include list-reset();
+}
+
+.main-nav__toggle {
+  display: none;
+}
+
+.main-nav__menu-title {
+  display: none;
+}
+
+@media (max-width: $mobile-width) {
+
+  // .main-nav__toggle {
+  //   position: absolute;
+  //   content: "";
+  //   padding: 0;
+  //   top: 24px;
+  //   right: 20px;
+  //   display: block;
+  //   width: 16px;
+  //   height: 16px;
+  //
+  //   border: none;
+  //   background-color: transparent;
+  //   box-shadow: 0px 2px 0 0 #ffffff;
+  // }
+  //
+  // .main-nav__menu-title {
+  //   position: absolute;
+  //   top: 0;
+  //   left: -20px;
+  // }
+  //
+  // .main-nav--closed .main-nav__toggle::after,
+  // .main-nav--closed .main-nav__toggle::before {
+  //   content: "";
+  //   position: absolute;
+  //   left: 0;
+  //   background-color: #ffffff;
+  //   width: 20px;
+  //   height: 2px;
+  // }
+  //
+  // .main-nav--closed .main-nav__toggle::before {
+  //   top: 10px;
+  // }
+  //
+  //
+  // .main-nav--closed .main-nav__toggle::after {
+  //   top: 22px;
+  // }
+
+  .main-nav__toggle {
+    position: absolute;
+    overflow-x: hidden;
+    top: 33px;
+    right: 16px;
+    display: block;
+    width: 20px;
+    height: 18px;
+    border: none;
+    background-color: transparent;
+  }
+
+  .main-nav--closed .main-nav__toggle::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 2px;
+    background-color: #ffffff;
+    box-shadow: -4px 7px 0 0 #ffffff, 0 14px 0 0 #ffffff;
+  }
+
+  .main-nav--opened .main-nav__toggle {
+    top: 31px;
+    right: 17px;
+    width: 18px;
+    height: 18px;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: 0;
+      width: 20px;
+      height: 2px;
+      background-color: #ffffff;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+      box-shadow: none;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  .main-nav--closed .menu__item {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav--nojs .menu__item {
+    display: block;
+  }
+
+  .main-nav__menu-title {
+    position: absolute;
+    top: 33px;
+    right: 44px;
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    color: #f0f0f0;
+  }
+}
