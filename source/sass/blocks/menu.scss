@@ -1,6 +1,6 @@
 .menu {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -17,6 +17,14 @@
   color: $accent-color;
 }
 
+.menu__item {
+  margin-right: 45px;
+}
+
+.menu__item:last-child {
+  margin-right: 0;
+}
+
 @media (max-width: $mobile-width) {
   .menu {
     flex-direction: column;
@@ -26,5 +34,6 @@
 
   .menu__item {
     margin-bottom: 37px;
+    margin-right: 0;
   }
 }
