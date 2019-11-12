@@ -52,55 +52,66 @@
 <path fill-rule="evenodd" clip-rule="evenodd" d="M7 1L5.33333 5.8H1L4.66667 8.88571L3.33333 13L7 10.2567L10.6667 13L9.33333 8.88571L13 5.8H8.66667L7 1Z" fill="white"></path>
 </symbol></svg>
     </div>
-    <header class="page-header">
-      <div class="homepage-bg">
+    <div class="page-container">
+      <header class="page-header">
+        <div class="page-header__logo-wrap">
+          <a class="page-header__logo" href="#">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/logo.svg">
+              <img class="page-header__logo-image" src="img/logo-mobile.svg" width="85" height="34" alt="Escape Room">
+            </picture>
+          </a>
+        </div>
+        <nav class="page-header__nav main-nav main-nav--closed main-nav--nojs">
+          <span class="main-nav__menu-title">МЕНЮ</span>
+          <button class="main-nav__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+          <ul class="main-nav__list menu">
+            <li class="menu__item">
+              <a hrer="quests.html" class="menu__link">Квесты</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="catalog.html">Новичкам</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="form.html">Отзывы</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="form.html">Акции</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="form.html">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="page-header__contacts page-header__contacts--closed">
+          <div class="page-header__location">
+            <svg class="page-header__city-icon" width="16" height="21" aria-hidden="true" role="presentation">
+              <use xlink:href="#icon-location"></use>
+            </svg>
+            <a class="page-header__city-link" href="#">Новосибирск</a>
+          </div>
+          <span class="page-header__phone">8 (383) 284 01 60</span>
+        </div>
+      </header>
+      <footer class="page-footer">
+        <ul class="page-footer__social social">
+          <li class="social__item"><a class="social__button social__button--insta" href="#"><span class="visually-hidden">Инстаграм</span></a></li>
+          <li class="social__item"><a class="social__button social__button--vk" href="#"><span class="visually-hidden">Вконтакте</span></a></li>
+        </ul>
+        <div class="page-footer__ask">
+          <a class="page-footer__ask-link" href="#">Задать вопрос
+          </a>
+        </div>
+      </footer>
+      <div class="page-container__bg">
         <picture>
           <source type="image/jpeg" media="(min-width: 768px)" srcset="img/bg.jpg 1x, img/bg@2x.jpg 2x">
-          <img class="homepage-bg-image" src="img/bg-mobile.jpg" srcset="img/bg-mobile@2x.jpg 2x" alt="">
+          <img class="page-container__bg-image" src="img/bg-mobile.jpg" srcset="img/bg-mobile@2x.jpg 2x" alt="">
         </picture>
       </div>
-
-      <div class="page-header__logo-wrap">
-        <a class="page-header__logo" href="#">
-          <picture>
-            <source media="(min-width: 768px)" srcset="img/logo.svg">
-            <img class="page-header__logo-image" src="img/logo-mobile.svg" width="85" height="34" alt="Escape Room">
-          </picture>
-        </a>
-      </div>
-      <nav class="page-header__nav main-nav main-nav--closed main-nav--nojs">
-        <span class="main-nav__menu-title">МЕНЮ</span>
-        <button class="main-nav__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-        <ul class="main-nav__list menu">
-          <li class="menu__item">
-            <a hrer="quests.html" class="menu__link">Квесты</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="catalog.html">Новичкам</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="form.html">Отзывы</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="form.html">Акции</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="form.html">Контакты</a>
-          </li>
-        </ul>
-      </nav>
-      <div class="page-header__contacts page-header__contacts--closed">
-        <div class="page-header__location">
-          <svg class="page-header__city-icon" width="16" height="21" aria-hidden="true" role="presentation">
-            <use xlink:href="#icon-location"></use>
-          </svg>
-          <a class="page-header__city-link" href="#">Новосибирск</a>
-        </div>
-        <span class="page-header__phone">8 (383) 284 01 60</span>
-      </div>
-    </header>
+    </div>
     <script src="js/script.js"></script>
   </body>
 </html>

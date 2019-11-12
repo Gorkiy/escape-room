@@ -1,0 +1,29 @@
+.page-footer {
+  position: absolute;
+  padding-bottom: 20px;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.page-footer__social {
+  flex-grow: 1;
+}
+
+.page-footer__ask-link {
+  padding: 3px 0;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.03em;
+  color: $main-color;
+  text-decoration: none;
+  border-bottom: 1px $main-color dashed;
+}
+
+@media (max-width: $mobile-width) {
+  .page-footer {
+    padding-bottom: 28px;
+  }
+}

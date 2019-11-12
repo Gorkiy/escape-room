@@ -1,0 +1,47 @@
+.social {
+  display: flex;
+  @include list-reset();
+}
+
+.social__item {
+  margin-right: 7px;
+}
+
+.social__button {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.social__button--insta {
+  background-image: url("../img/instagram.svg");
+}
+
+.social__button--vk {
+  background-image: url("../img/vk.svg");
+}
+
+.social__button--insta:hover {
+  background-image: url("../img/instagram-hover.svg");
+}
+
+.social__button--vk:hover {
+  background-image: url("../img/vk-hover.svg");
+}
+
+.social__button:active {
+  opacity: 0.5;
+}
+
+@media (max-width: $mobile-width) {
+  .social__button {
+    width: 36px;
+    height: 36px;
+  }
+
+  .social__item {
+    margin-right: 15px;
+  }
+}

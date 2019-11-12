@@ -2,8 +2,6 @@
   display: flex;
   justify-content: space-between;
   padding-top: 20px;
-  margin-right: 40px;
-  margin-left: 32px;
   align-items: center;
 }
 
@@ -13,9 +11,6 @@
 
 .page-header__nav {
   flex-grow: 1;
-  // margin-left: 130px;
-  // margin-right: 130px;
-  // max-width: 50%;
 }
 
 .page-header__contacts {
@@ -71,19 +66,15 @@
 
 @media (max-width: $mobile-width) {
   .page-header {
-    // padding-top: 20px;
-    margin: 0;
     flex-direction: column;
     align-items: stretch;
   }
 
   .page-header__nav {
-    max-width: none;
     order: 2;
   }
 
   .page-header__logo {
-    margin-left: 16px;
     width: 96px;
     height: 36px;
   }
