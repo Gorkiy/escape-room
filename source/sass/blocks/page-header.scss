@@ -1,7 +1,10 @@
 .page-header {
+  position: fixed;
+  z-index: 2;
   display: flex;
   justify-content: space-between;
   padding-top: 20px;
+  // width: 100%;
   align-items: center;
 }
 

@@ -1,10 +1,11 @@
 .page-footer {
-  position: absolute;
-  padding-bottom: 20px;
+  position: fixed;
+  width: 100%;
+  padding-bottom: 18px;
   bottom: 0;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  // justify-content: space-between;
 }
 
 .page-footer__social {
@@ -12,11 +13,11 @@
 }
 
 .page-footer__ask-link {
-  padding: 3px 0;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 19px;
-  letter-spacing: 0.03em;
+  // padding: 2px 0;
+  padding-bottom: 3px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 144%;
   color: $main-color;
   text-decoration: none;
   border-bottom: 1px $main-color dashed;
@@ -25,5 +26,16 @@
 @media (max-width: $mobile-width) {
   .page-footer {
     padding-bottom: 28px;
+    left: 0;
+    padding-left: 16px;
+    padding-right: 16px;
   }
+
+  .page-footer__ask-link {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.03em;
+  }
+
 }
