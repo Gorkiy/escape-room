@@ -1,11 +1,11 @@
 .page-footer {
   position: fixed;
-  width: 100%;
   padding-bottom: 18px;
   bottom: 0;
+  left: 32px;
+  right: 32px;
   display: flex;
   align-items: center;
-  // justify-content: space-between;
 }
 
 .page-footer__social {
@@ -13,7 +13,6 @@
 }
 
 .page-footer__ask-link {
-  // padding: 2px 0;
   padding-bottom: 3px;
   font-weight: 500;
   font-size: 12px;
@@ -23,12 +22,18 @@
   border-bottom: 1px $main-color dashed;
 }
 
+.page-footer__ask-link:hover {
+  color: $accent-color;
+  border-bottom: 1px $accent-color dashed;
+}
+
 @media (max-width: $mobile-width) {
   .page-footer {
+    display: none;
     padding-bottom: 28px;
-    left: 0;
-    padding-left: 16px;
-    padding-right: 16px;
+    left: 16px;
+    right: 16px;
+    align-items: flex-start;
   }
 
   .page-footer__ask-link {
