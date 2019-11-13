@@ -13,8 +13,6 @@ navToggle.addEventListener('click', function() {
     navMain.classList.add('main-nav--opened');
     headerContacts.classList.remove('page-header__contacts--closed');
     mainContent.classList.add('visually-hidden');
-    // console.log(footer);
-    // console.log(footer.hidden);
     footer.style.display = "flex";
   } else {
     navMain.classList.add('main-nav--closed');
