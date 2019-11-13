@@ -30,8 +30,22 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   border-radius: 50px;
-  color: #FFFFFF;
+  color: #ffffff;
   background-color: $accent-color;
+}
+
+.main-program__button:hover {
+  background-color: #f39425;
+}
+
+@media (max-width: $tablet-width) {
+  .main-program__title {
+    width: 100%;
+  }
+
+  .main-program__description {
+    width: 100%;
+  }
 }
 
 @media (max-width: $mobile-width) {
@@ -58,5 +72,4 @@
     font-size: 14px;
     line-height: 16px;
   }
-
 }

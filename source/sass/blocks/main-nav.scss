@@ -10,7 +10,7 @@
   display: none;
 }
 
-@media (max-width: $mobile-width) {
+@media (max-width: $tablet-width) {
   .main-nav__toggle {
     position: absolute;
     overflow-x: hidden;
@@ -21,6 +21,7 @@
     height: 18px;
     border: none;
     background-color: transparent;
+    cursor: pointer;
   }
 
   .main-nav--closed .main-nav__toggle::before {

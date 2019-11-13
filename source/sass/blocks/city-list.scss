@@ -10,8 +10,12 @@
   font-weight: bold;
   font-size: 24px;
   line-height: 120%;
-  color: #FFFFFF;
+  color: #ffffff;
   opacity: 0.32;
+}
+
+.city-list__link:hover {
+  opacity: 1;
 }
 
 .city-list__link--active {

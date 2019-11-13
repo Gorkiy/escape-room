@@ -5,6 +5,7 @@ var navToggle = document.querySelector('.main-nav__toggle');
 var headerContacts = document.querySelector('.page-header__contacts');
 var mainContent = document.querySelector('.page-main');
 var footer = document.querySelector('.page-footer');
+var pageContainer = document.querySelector('.page-container');
 
 navMain.classList.remove('main-nav--nojs');
 navToggle.addEventListener('click', function() {
@@ -13,12 +14,14 @@ navToggle.addEventListener('click', function() {
     navMain.classList.add('main-nav--opened');
     headerContacts.classList.remove('page-header__contacts--closed');
     mainContent.classList.add('visually-hidden');
+    pageContainer.classList.add('page-container--blur');
     footer.style.display = "flex";
   } else {
     navMain.classList.add('main-nav--closed');
     navMain.classList.remove('main-nav--opened');
     headerContacts.classList.add('page-header__contacts--closed');
     mainContent.classList.remove('visually-hidden');
+    pageContainer.classList.remove('page-container--blur');
     footer.style.display = "none";
   }
 });
