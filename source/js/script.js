@@ -111,6 +111,22 @@ locationLink.addEventListener('click', function(evt) {
   cityModal.classList.add('modal--show');
 });
 
+askModal.addEventListener('click', function(evt) {
+  var formBox = evt.target.closest('.modal-ask');
+  var closeButton = evt.target.closest('.modal__close-button');
+
+  if (!formBox) askModal.classList.remove('modal--show');
+  if (closeButton) askModal.classList.remove('modal--show');
+});
+
+cityModal.addEventListener('click', function(evt) {
+  var formBox = evt.target.closest('.modal-city');
+  var closeButton = evt.target.closest('.modal__close-button');
+
+  if (!formBox) cityModal.classList.remove('modal--show');
+  if (closeButton) cityModal.classList.remove('modal--show');
+});
+
 document.addEventListener('keydown', function(evt) {
   if (evt.keyCode === 27) {
     askModal.classList.remove('modal--show');
