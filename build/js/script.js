@@ -79,6 +79,22 @@ form.addEventListener('input', function (evt) {
   }
 });
 
+form.addEventListener('submit', function (evt) {
+  evt.preventDefault();
+  var name = document.getElementById('name').value;
+  var email = document.getElementById('email').value;
+  var question = document.getElementById('question').value;
+
+  var userQuestion = {
+    name,
+    email,
+    question
+  };
+  localStorage.setItem('userQuestion', JSON.stringify(userQuestion));
+  console.log(localStorage);
+
+});
+
 form.addEventListener('focusin', function (evt) {
   var input = evt.target.closest('.ask-form__input');
   var row = evt.target.closest('.ask-form__row');
@@ -105,6 +121,7 @@ var cityModal = document.querySelector('.modal--city');
 
 askLink.addEventListener('click', function(evt) {
   askModal.classList.add('modal--show');
+  var inputName = document.getElementById('name').focus();
 });
 
 locationLink.addEventListener('click', function(evt) {
