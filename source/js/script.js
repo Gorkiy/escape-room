@@ -6,7 +6,11 @@ var headerContacts = document.querySelector('.page-header__contacts');
 var mainContent = document.querySelector('.page-main');
 var footer = document.querySelector('.page-footer');
 var pageContainer = document.querySelector('.page-container');
+var askFormButton = document.querySelector('.ask-form__button');
+var askLink = document.querySelector('.page-footer__ask-link');
+var locationLink = document.querySelector('.page-header__location');
 
+// Поведение навигации
 navMain.classList.remove('main-nav--nojs');
 navToggle.addEventListener('click', function() {
   if (navMain.classList.contains('main-nav--closed')) {
@@ -15,17 +19,104 @@ navToggle.addEventListener('click', function() {
     headerContacts.classList.remove('page-header__contacts--closed');
     mainContent.classList.add('visually-hidden');
     pageContainer.classList.add('page-container--blur');
-    footer.style.display = "flex";
+    footer.style.display = 'flex';
   } else {
     navMain.classList.add('main-nav--closed');
     navMain.classList.remove('main-nav--opened');
     headerContacts.classList.add('page-header__contacts--closed');
     mainContent.classList.remove('visually-hidden');
     pageContainer.classList.remove('page-container--blur');
-    footer.style.display = "none";
+    footer.style.display = 'none';
   }
 });
 
+// Валидация формы
+var form = document.querySelector('.ask-form');
+
+function checkFormState() {
+  var inputs = form.querySelectorAll('input');
+  var isReady = true;
+
+  for (let input of inputs) {
+    if (input.type === 'checkbox' && !input.checked) isReady = false;
+    if (!input.value) isReady = false;
+    if (input.id === 'email' && input.validity.typeMismatch) isReady = false;
+  }
+  return isReady;
+};
+
+form.addEventListener('input', function (evt) {
+  // Поведение кнопки отправки формы
+  var isReady = checkFormState();
+  if (isReady) {
+    askFormButton.disabled = false;
+  } else {
+    askFormButton.disabled = true;
+  }
+  // Обработка ошибок и поведение сползающих лейблов
+  var input = evt.target.closest('.ask-form__input');
+  var row = evt.target.closest('.ask-form__row');
+
+  if (input) {
+    var errorMsg = row.querySelector('.ask-form__msg');
+    var label = row.querySelector('.ask-form__label');
+
+    if (input.value) {
+      label.classList.add('ask-form__label--filled');
+    }
+
+    if (input.id === 'email') {
+      if (input.validity.typeMismatch) {
+        errorMsg.innerText = 'Введён некорректный e-mail, попробуйте заново';
+        errorMsg.classList.remove('visually-hidden');
+        input.classList.add('ask-form__input--invalid');
+      } else {
+        errorMsg.innerText = '';
+        errorMsg.classList.add('visually-hidden');
+        input.classList.remove('ask-form__input--invalid');
+      }
+    }
+  }
+});
+
+form.addEventListener('focusin', function (evt) {
+  var input = evt.target.closest('.ask-form__input');
+  var row = evt.target.closest('.ask-form__row');
+
+  if (input) {
+    var label = row.querySelector('.ask-form__label');
+    label.classList.add('ask-form__label--filled');
+  }
+});
+
+form.addEventListener('focusout', function (evt) {
+  var input = evt.target.closest('.ask-form__input');
+  var row = evt.target.closest('.ask-form__row');
+
+  if (input && !input.value) {
+    var label = row.querySelector('.ask-form__label');
+    label.classList.remove('ask-form__label--filled');
+  }
+});
+
+// Модальные окна
+var askModal = document.querySelector('.modal--ask');
+var cityModal = document.querySelector('.modal--city');
+
+askLink.addEventListener('click', function(evt) {
+  askModal.classList.add('modal--show');
+});
+
+locationLink.addEventListener('click', function(evt) {
+  cityModal.classList.add('modal--show');
+});
+
+document.addEventListener('keydown', function(evt) {
+  if (evt.keyCode === 27) {
+    askModal.classList.remove('modal--show');
+    cityModal.classList.remove('modal--show');
+  }
+});
 
 /*! picturefill - v3.0.2 - 2016-02-12
  * https://scottjehl.github.io/picturefill/

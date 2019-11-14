@@ -6,13 +6,16 @@
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: #3D3333;
-  opacity: 0.96;
+  background-color: #3d3333;
 }
 
 .modal--show {
   display: block;
 }
+
+// .modal--ask {
+//   display: block;
+// }
 
 .modal__content {
   padding: 32px;
@@ -21,8 +24,9 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 480px;
-  padding-bottom: 0;
-  background: linear-gradient(0deg, #141414 0%, #1F1D1D 100%);
+  // padding-bottom: 0;
+  // background: linear-gradient(0deg, #141414 0%, #1F1D1D 100%);
+  background-color: #1f1d1d;
   border-radius: 3px;
 }
 
@@ -82,9 +86,9 @@
 }
 
 .modal__text {
-  font-size: 17px;
-  line-height: 160%;
-  color: $main-color;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 150%;
 }
 
 .modal-city__detect {
@@ -106,7 +110,7 @@
 @media (max-width: $mobile-width) {
   .modal {
     background: linear-gradient(0deg, #141414 0%, #1F1D1D 100%);
-    opacity: 1;
+    // opacity: 1;
   }
 
   .modal__content {
@@ -116,7 +120,8 @@
   }
 
   .modal__heading {
-    margin-top: 16px;
+    margin-top: 16px
+    ;
   }
 
   .modal__close-button {
