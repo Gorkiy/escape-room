@@ -1,0 +1,68 @@
+<!-- City Selection -->
+<div class="modal modal--city">
+  <div class="modal__content modal-city">
+    <button class="modal__close-button" type="button">
+      <span class="visually-hidden">Закрыть окно</span>
+    </button>
+    <h2 class="modal__heading">Ваш город</h2>
+    <div class="modal-city__detect">
+      <svg class="modal-city__detect-icon" width="20" height="20" aria-hidden="true" role="presentation">
+        <use xlink:href="#icon-detect"></use>
+      </svg>
+      <a class="modal-city__link modal__link" href="#">Определить местоположение</a>
+    </div>
+    <span class="modal__text modal-city__choose-sign">... или выберите вручную</span>
+    <ul class="modal__city-list city-list">
+      <li class="city-list__item">
+        <a class="city-list__link city-list__link--active">Новосибирск</a>
+      </li>
+      <li class="city-list__item">
+        <a class="city-list__link" href="#">Иркутск</a>
+      </li>
+      <li class="city-list__item">
+        <a class="city-list__link" href="#">Смоленск</a>
+      </li>
+      <li class="city-list__item">
+        <a class="city-list__link" href="#">Волгоград</a>
+      </li>
+      <li class="city-list__item">
+        <a class="city-list__link" href="#">Комсомольск-на-Амуре</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- Ask a Qusetion Form -->
+<div class="modal modal--ask">
+  <div class="modal__content modal-ask">
+    <button class="modal__close-button" type="button">
+      <span class="visually-hidden">Закрыть окно</span>
+    </button>
+    <h2 class="ask-form__heading modal__heading">Задайте вопрос</h2>
+    <form class="ask-form" method="post" action="https://echo.htmlacademy.ru">
+      <div class="ask-form__row">
+        <span class="ask-form__text modal__text">Чтобы мы смогли обращаться к вам, оставьте ваше имя</span>
+        <input class="ask-form__input" type="text" name="name" id="name" required>
+        <label class="ask-form__label" for="name">Имя</label>
+        <span class="ask-form__msg visually-hidden"></span>
+      </div>
+      <div class="ask-form__row">
+        <span class="ask-form__text modal__text">Чтобы вы получили ответ, оставьте ваш e-mail</span>
+        <input class="ask-form__input" type="email" name="email" id="email" required>
+        <label class="ask-form__label" for="email">E-mail</label>
+        <span class="ask-form__msg visually-hidden"></span>
+      </div>
+      <div class="ask-form__row">
+        <span class="ask-form__text modal__text">Ваш вопрос:</span>
+        <textarea class="ask-form__question" id="question" rows="4" placeholder="Начните вводить ..." cols="50"></textarea>
+      </div>
+      <div class="ask-form__button-wrap">
+        <button class="ask-form__button button" type="submit" disabled>Отправить заявку
+        </button>
+      </div>
+      <div class="ask-form__check-row modal-ask__terms">
+        <input class="ask-form__checkbox visually-hidden" type="checkbox" name="terms" id="terms" value="terms-accepted">
+        <label class="ask-form__checkbox-label" for="terms">Я согласен с правилами обработки персональных данных и пользовательским соглашением</label>
+      </div>
+    </form>
+  </div>
+</div>
