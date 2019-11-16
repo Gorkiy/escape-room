@@ -2,6 +2,7 @@
   "name": "Liga-A-start-template",
   "version": "1.0.0",
   "description": "Стартовый шаблон сборки Лиги А",
+  "homepage": "https://gorkiy.github.io/escape-room",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "9.5.x",
@@ -29,6 +30,8 @@
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
     "test": "npm run editorconfig && npm run stylelint && eslint source/js/",
     "build": "gulp build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "gulp start",
     "webp": "gulp webp",
     "sprite": "gulp sprite"
@@ -50,6 +53,7 @@
     "node": "8.15"
   },
   "dependencies": {
-    "del": "^4.1.1"
+    "del": "^4.1.1",
+    "gh-pages": "^2.1.1"
   }
 }

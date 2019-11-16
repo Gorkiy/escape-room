@@ -91,8 +91,6 @@ form.addEventListener('submit', function (evt) {
     question
   };
   localStorage.setItem('userQuestion', JSON.stringify(userQuestion));
-  console.log(localStorage);
-
 });
 
 form.addEventListener('focusin', function (evt) {
