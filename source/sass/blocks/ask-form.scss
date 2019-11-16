@@ -4,7 +4,6 @@
 }
 
 .ask-form__heading {
-  margin-top: 6px;
   margin-bottom: 40px;
 }
 
@@ -98,6 +97,12 @@
 .ask-form__check-row {
   padding-left: 24px;
   position: relative;
+}
+
+.ask-form__checkbox-label {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 144%;
 }
 
 .ask-form__checkbox-label:before {

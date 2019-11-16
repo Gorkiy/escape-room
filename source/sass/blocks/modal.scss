@@ -13,10 +13,6 @@
   display: block;
 }
 
-// .modal--ask {
-//   display: block;
-// }
-
 .modal__content {
   padding: 32px;
   position: absolute;
@@ -92,7 +88,6 @@
 }
 
 .modal-city__detect {
-  // margin-top: 24px;
   margin-bottom: 40px;
   display: flex;
   align-items: center;
@@ -104,7 +99,11 @@
 
 .modal__city-list {
   margin-top: 20px;
-  margin-bottom: 32px;
+}
+
+.modal-city__choose-sign {
+  font-size: 17px;
+  line-height: 160%;
 }
 
 @media (max-width: $mobile-width) {
