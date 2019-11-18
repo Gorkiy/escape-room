@@ -1,11 +1,20 @@
 .page-footer {
+  z-index: 2;
   position: fixed;
   padding-bottom: 18px;
+  padding-left: 32px;
+  padding-right: 32px;
   bottom: 0;
-  left: 32px;
-  right: 32px;
+  left: 0;
+  right: 0;
   display: flex;
   align-items: center;
+  background: linear-gradient(180deg, rgba(19, 18, 18, 0) 0%, #131212 100%);
+  // opacity: 0.8;
+}
+
+.page-footer--main {
+  background: none;
 }
 
 .page-footer__social {
@@ -29,10 +38,12 @@
 
 @media (max-width: $mobile-width) {
   .page-footer {
-    display: none;
     padding-bottom: 28px;
-    left: 16px;
-    right: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    left: 0;
+    right: 0;
+    display: none;
     align-items: flex-start;
   }
 

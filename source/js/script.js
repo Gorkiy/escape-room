@@ -3,12 +3,13 @@
 var navMain = document.querySelector('.main-nav');
 var navToggle = document.querySelector('.main-nav__toggle');
 var headerContacts = document.querySelector('.page-header__contacts');
-var mainContent = document.querySelector('.page-main');
+var mainContent = document.querySelector('.main-content');
 var footer = document.querySelector('.page-footer');
 var pageContainer = document.querySelector('.page-container');
 var askFormButton = document.querySelector('.ask-form__button');
 var askLink = document.querySelector('.page-footer__ask-link');
 var locationLink = document.querySelector('.page-header__location');
+var pageHeader = document.querySelector('.page-header');
 
 // Поведение навигации
 navMain.classList.remove('main-nav--nojs');
@@ -19,6 +20,7 @@ navToggle.addEventListener('click', function() {
     headerContacts.classList.remove('page-header__contacts--closed');
     mainContent.classList.add('visually-hidden');
     pageContainer.classList.add('page-container--blur');
+    pageHeader.classList.add('page-header--open');
     footer.style.display = 'flex';
   } else {
     navMain.classList.add('main-nav--closed');
@@ -26,6 +28,7 @@ navToggle.addEventListener('click', function() {
     headerContacts.classList.add('page-header__contacts--closed');
     mainContent.classList.remove('visually-hidden');
     pageContainer.classList.remove('page-container--blur');
+    pageHeader.classList.remove('page-header--open');
     footer.style.display = 'none';
   }
 });

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preload" href="css/style.min.css" as="style">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/Raleway-Regular.ttf" as="font">
+    <title>Escape Room</title>
+  </head>
+  <body>
+    <div style="display: none">
+      <include src="build/img/sprite_auto.svg"></include>
+    </div>
+    <div class="page-container">
+      <header class="page-header">
+        <div class="page-header__logo-wrap">
+          <a class="page-header__logo" href="index.html">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/logo.svg">
+                <img class="page-header__logo-image" src="img/logo-mobile.svg" width="85" height="34" alt="Escape Room">
+              </picture>
+            </a>
+          </div>
+          <nav class="page-header__nav main-nav main-nav--closed main-nav--nojs">
+            <span class="main-nav__menu-title">МЕНЮ</span>
+            <button class="main-nav__toggle" type="button">
+              <span class="visually-hidden">Открыть меню</span>
+            </button>
+            <ul class="main-nav__list menu">
+              <li class="menu__item">
+                <a class="menu__link menu__link--active">Квесты</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="catalog.html">Новичкам</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="form.html">Отзывы</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="form.html">Акции</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="form.html">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="page-header__contacts page-header__contacts--closed">
+            <div class="page-header__location">
+              <svg class="page-header__city-icon" width="16" height="21" aria-hidden="true" role="presentation">
+                <use xlink:href="#icon-location"></use>
+              </svg>
+              <a class="page-header__city-link" href="#">Новосибирск</a>
+            </div>
+            <span class="page-header__phone">8 (383) 284 01 60</span>
+          </div>
+      </header>
+      <main class="page-quests main-content">
+        <section class="quest-select">
+          <span class="quest-select__breadcrumb breadcrumb">квесты в Новосибирске</span>
+          <h1 class="quest-select__title title">
+            Выберите тематику
+          </h1>
+          <ul class="quest-select__genre-list genre-list">
+            <li class="genre-list__item">
+              <div class="genre-list__item-wrap">
+                <a class="genre-list__link" href="#">
+                  <svg class="genre-list__icon" width="26" height="30" aria-hidden="true" role="presentation">
+                    <use xlink:href="#icon-q_all"></use>
+                  </svg>
+                  <span class="genre-list__title genre-list__title--current">Все квесты</span>
+                </a>
+              </div>
+            </li>
+            <li class="genre-list__item">
+              <div class="genre-list__item-wrap">
+                <a class="genre-list__link" href="#">
+                  <svg class="genre-list__icon" width="36" height="30" aria-hidden="true" role="presentation">
+                    <use xlink:href="#icon-q_adventures"></use>
+                  </svg>
+                  <span class="genre-list__title">Приключения</span>
+                </a>
+              </div>
+            </li>
+            <li class="genre-list__item">
+              <div class="genre-list__item-wrap">
+                <a class="genre-list__link" href="#">
+                  <svg class="genre-list__icon" width="30" height="30" aria-hidden="true" role="presentation">
+                    <use xlink:href="#icon-q_horror"></use>
+                  </svg>
+                  <span class="genre-list__title">Ужасы</span>
+                </a>
+              </div>
+            </li>
+            <li class="genre-list__item">
+              <div class="genre-list__item-wrap">
+                <a class="genre-list__link" href="#">
+                  <svg class="genre-list__icon" width="30" height="30" aria-hidden="true" role="presentation">
+                    <use xlink:href="#icon-q_mystic"></use>
+                  </svg>
+                  <span class="genre-list__title">Мистика</span>
+                </a>
+              </div>
+            </li>
+            <li class="genre-list__item">
+              <div class="genre-list__item-wrap">
+                <a class="genre-list__link" href="#">
+                  <svg class="genre-list__icon" width="40" height="30" aria-hidden="true" role="presentation">
+                    <use xlink:href="#icon-q_detective"></use>
+                  </svg>
+                  <span class="genre-list__title">Детектив</span>
+                </a>
+              </div>
+            </li>
+            <li class="genre-list__item">
+              <div class="genre-list__item-wrap">
+                <a class="genre-list__link" href="#">
+                  <svg class="genre-list__icon" width="28" height="30" aria-hidden="true" role="presentation">
+                    <use xlink:href="#icon-q_scifi"></use>
+                  </svg>
+                  <span class="genre-list__title">Sci-fi</span>
+                </a>
+              </div>
+            </li>
+          </ul>
+
+          <ul class="quest-select__quests quests">
+            <li class="quests__item">
+              <a class="quests__item-link" href="#">
+                <span class="quests__hit">Хит</span>
+                <div class="quests__info">
+                  <span class="quests__name">Склеп</span>
+                  <span class="quests__address">пр. Ленина, 37</span>
+                  <div class="quests__details">
+                    <span class="quests__people">2–5 чел</span>
+                    <span class="quests__difficulty">cложный</span>
+                  </div>
+                </div>
+                <div class="quests__image-box">
+                  <img class="quests__bg-image" src="img/q_select-tomb.jpg" srcset="img/q_select-tomb@2x.jpg 2x" alt="Квест склеп">
+                </div>
+              </a>
+            </li>
+            <li class="quests__item">
+              <a class="quests__item-link" href="#">
+                <span class="quests__hit">Хит</span>
+                <div class="quests__info">
+                  <span class="quests__name">Маньяк</span>
+                  <span class="quests__address">Верхнетецкая, 32</span>
+                  <div class="quests__details">
+                    <span class="quests__people">3–6 чел</span>
+                    <span class="quests__difficulty">средний</span>
+                  </div>
+                </div>
+                <div class="quests__image-box">
+                  <img class="quests__bg-image" src="img/q_select-maniac.jpg" srcset="img/q_select-maniac@2x.jpg 2x" alt="Квест маньяк">
+                </div>
+              </a>
+            </li>
+            <li class="quests__item">
+              <a class="quests__item-link" href="#">
+                <div class="quests__info">
+                  <span class="quests__name">Ритуал</span>
+                  <span class="quests__address">пр. Ленина, 37</span>
+                  <div class="quests__details">
+                    <span class="quests__people">3–5 чел</span>
+                    <span class="quests__difficulty">сложный</span>
+                  </div>
+                </div>
+                <div class="quests__image-box">
+                  <img class="quests__bg-image" src="img/q_select-ritual.jpg" srcset="img/q_select-ritual@2x.jpg 2x" alt="Квест ритуал">
+                </div>
+              </a>
+            </li>
+            <li class="quests__item">
+              <a class="quests__item-link" href="#">
+                <div class="quests__info">
+                  <span class="quests__name">История призраков</span>
+                  <span class="quests__address">Новослободская, 2а</span>
+                  <div class="quests__details">
+                    <span class="quests__people">5–6 чел</span>
+                    <span class="quests__difficulty">легкий</span>
+                  </div>
+                </div>
+                <div class="quests__image-box">
+                  <img class="quests__bg-image" src="img/q_select-ghost.jpg" srcset="img/q_select-ghost@2x.jpg 2x" alt="Квест История призраков">
+                </div>
+              </a>
+            </li>
+            <li class="quests__item">
+              <a class="quests__item-link" href="#">
+                <div class="quests__info">
+                  <span class="quests__name">Тайны старого особняка</span>
+                  <span class="quests__address">пр. Ленина, 27</span>
+                  <div class="quests__details">
+                    <span class="quests__people">2–5 чел</span>
+                    <span class="quests__difficulty">легкий</span>
+                  </div>
+                </div>
+                <div class="quests__image-box">
+                  <img class="quests__bg-image" src="img/q_select-mystery.jpg" srcset="img/q_select-mystery@2x.jpg 2x" alt="Квест Тайны старого особняка">
+                </div>
+              </a>
+            </li>
+            <li class="quests__item">
+              <a class="quests__item-link" href="#">
+                <span class="quests__hit">Хит</span>
+                <div class="quests__info">
+                  <span class="quests__name">Хижина в лесу</span>
+                  <span class="quests__address">Верхнетецкая, 32</span>
+                  <div class="quests__details">
+                    <span class="quests__people">4–7 чел</span>
+                    <span class="quests__difficulty">средний</span>
+                  </div>
+                </div>
+                <div class="quests__image-box">
+                  <img class="quests__bg-image" src="img/q_select-hut.jpg" srcset="img/q_select-hut@2x.jpg 2x" alt="Квест Хижина в лесу">
+                </div>
+              </a>
+            </li>
+            <li class="quests__item">
+              <a class="quests__item-link" href="#">
+                <div class="quests__info">
+                  <span class="quests__name">Фатальный эксперимент</span>
+                  <span class="quests__address">Верхнетецкая, 32</span>
+                  <div class="quests__details">
+                    <span class="quests__people">5–8 чел</span>
+                    <span class="quests__difficulty">сложный</span>
+                  </div>
+                </div>
+                <div class="quests__image-box">
+                  <img class="quests__bg-image" src="img/q_select-trial.jpg" srcset="img/q_select-trial@2x.jpg 2x" alt="Квест Фатальный эксперимент">
+                </div>
+              </a>
+            </li>
+            <li class="quests__item">
+              <a class="quests__item-link" href="#">
+                <div class="quests__info">
+                  <span class="quests__name">Метро 2033</span>
+                  <span class="quests__address">Новослободская, 2а</span>
+                  <div class="quests__details">
+                    <span class="quests__people">6–8 чел</span>
+                    <span class="quests__difficulty">средний</span>
+                  </div>
+                </div>
+                <div class="quests__image-box">
+                  <img class="quests__bg-image" src="img/q_select-metro.jpg" srcset="img/q_select-metro@2x.jpg 2x" alt="Квест Метро 2033">
+                </div>
+              </a>
+            </li>
+            <li class="quests__item">
+              <a class="quests__item-link" href="#">
+                <div class="quests__info">
+                  <span class="quests__name">Старый чердак</span>
+                  <span class="quests__address">Новослободская, 2а</span>
+                  <div class="quests__details">
+                    <span class="quests__people">2–3 чел</span>
+                    <span class="quests__difficulty">легкий</span>
+                  </div>
+                </div>
+                <div class="quests__image-box">
+                  <img class="quests__bg-image" src="img/q_select-attic.jpg" srcset="img/q_select-attic@2x.jpg 2x" alt="Квест Старый чердак">
+                </div>
+              </a>
+            </li>
+            <li class="quests__item">
+              <a class="quests__item-link" href="#">
+                <div class="quests__info">
+                  <span class="quests__name">Последний рубеж</span>
+                  <span class="quests__address">Верхнетецкая, 32</span>
+                  <div class="quests__details">
+                    <span class="quests__people">4–7 чел</span>
+                    <span class="quests__difficulty">средний</span>
+                  </div>
+                </div>
+                <div class="quests__image-box">
+                  <img class="quests__bg-image" src="img/q_select-front.jpg" srcset="img/q_select-front@2x.jpg 2x" alt="Квест Последний рубеж">
+                </div>
+              </a>
+            </li>
+            <li class="quests__item">
+              <a class="quests__item-link" href="#">
+                <div class="quests__info">
+                  <span class="quests__name">Марс–2056</span>
+                  <span class="quests__address">пр. Ленина, 37</span>
+                  <div class="quests__details">
+                    <span class="quests__people">2–4 чел</span>
+                    <span class="quests__difficulty">легкий</span>
+                  </div>
+                </div>
+                <div class="quests__image-box">
+                  <img class="quests__bg-image" src="img/q_select-mars.jpg" srcset="img/q_select-mars@2x.jpg 2x" alt="Квест Марс–2056">
+                </div>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </main>
+      <footer class="page-footer">
+        <ul class="page-footer__social social">
+          <li class="social__item"><a class="social__button social__button--insta" href="#"><span class="visually-hidden">Инстаграм</span></a></li>
+          <li class="social__item"><a class="social__button social__button--vk" href="#"><span class="visually-hidden">Вконтакте</span></a></li>
+        </ul>
+        <div class="page-footer__ask">
+          <a class="page-footer__ask-link" href="#">Задать вопрос
+          </a>
+        </div>
+      </footer>
+      <!-- Modals -->
+      <include src="build/components/modals.html"></include>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>

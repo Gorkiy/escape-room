@@ -1,12 +1,19 @@
 .page-header {
   z-index: 2;
   padding-top: 20px;
+  padding-left: 32px;
+  padding-right: 32px;
   position: fixed;
-  left: 32px;
-  right: 32px;
+  left: 0;
+  right: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #1c1c1c;
+}
+
+.page-header--main {
+  background: none;
 }
 
 .page-header__logo-wrap {
@@ -70,10 +77,14 @@
 
 @media (max-width: $tablet-width) {
   .page-header {
-    left: 16px;
-    right: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
     flex-direction: column;
     align-items: stretch;
+  }
+
+  .page-header--open {
+    background: none;
   }
 
   .page-header__nav {

@@ -1,0 +1,137 @@
+.quests {
+  @include list-reset();
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.quests__item {
+  margin-bottom: 2%;
+  position: relative;
+  width: 32%;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    height: 70%;
+    background: linear-gradient(0.17deg, rgba(28, 27, 27, 0.9) 5.23%, rgba(46, 46, 46, 0) 98.38%);
+  }
+}
+
+.quests__image-box {
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.quests__bg-image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.quests__item-link {
+  color: white;
+}
+
+.quests__hit {
+  padding: 4px 12px 1px 30px;
+  position: absolute;
+  top: 15px;
+  right: 19px;
+  display: inline-block;
+  border: 2px solid rgba(242, 137, 15, 0.74);
+  border-radius: 25px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 144%;
+
+  &::before {
+    position: absolute;
+    left: 12px;
+    content: "";
+    width: 14px;
+    height: 14px;
+    background-image: url("../../img/icon-star.svg");
+    background-size: cover;
+  }
+}
+
+.quests__info {
+  padding: 0 20px;
+  z-index: 1;
+  position: absolute;
+  bottom: 12%;
+  display: flex;
+  flex-direction: column;
+}
+
+.quests__name {
+  margin-bottom: 12px;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 120%;
+}
+
+.quests__address,
+.quests__details {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 144%;
+  color: $main-color;
+}
+
+.quests__address {
+  margin-bottom: 5px;
+  padding-left: 20px;
+  position: relative;
+  
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 11px;
+    height: 14px;
+    background-image: url("../../img/icon-location-small.svg");
+    background-size: cover;
+  }
+}
+
+.quests__people {
+  position: relative;
+  padding-left: 20px;
+  padding-right: 13px;
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 13px;
+    height: 16px;
+    background-image: url("../../img/icon-person.svg");
+    background-size: cover;
+  }
+}
+
+.quests__difficulty {
+  position: relative;
+  padding-left: 32px;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 8px;
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-image: url("../../img/icon-puzzle.svg");
+    background-size: cover;
+  }
+}
