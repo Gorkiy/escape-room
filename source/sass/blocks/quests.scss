@@ -1,8 +1,11 @@
 .quests {
   @include list-reset();
   margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .quests__item {
@@ -61,9 +64,10 @@
     content: "";
     width: 14px;
     height: 14px;
-    background-image: url("../../img/icon-star.svg");
+    background-image: url("../img/icon-star.svg");
     background-size: cover;
-    filter: invert(50%) sepia(71%) saturate(1682%) hue-rotate(1deg) brightness(107%) contrast(70%);
+    -webkit-filter: invert(50%) sepia(71%) saturate(1682%) hue-rotate(1deg) brightness(107%) contrast(70%);
+            filter: invert(50%) sepia(71%) saturate(1682%) hue-rotate(1deg) brightness(107%) contrast(70%);
   }
 }
 
@@ -72,8 +76,13 @@
   z-index: 1;
   position: absolute;
   bottom: 12%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .quests__name {
@@ -103,9 +112,10 @@
     content: "";
     width: 11px;
     height: 14px;
-    background-image: url("../../img/icon-location-small.svg");
+    background-image: url("../img/icon-location-small.svg");
     background-size: cover;
-    filter: invert(50%) sepia(71%) saturate(1682%) hue-rotate(1deg) brightness(107%) contrast(70%);
+    -webkit-filter: invert(50%) sepia(71%) saturate(1682%) hue-rotate(1deg) brightness(107%) contrast(70%);
+            filter: invert(50%) sepia(71%) saturate(1682%) hue-rotate(1deg) brightness(107%) contrast(70%);
   }
 }
 
@@ -122,7 +132,7 @@
     content: "";
     width: 13px;
     height: 16px;
-    background-image: url("../../img/icon-person.svg");
+    background-image: url("../img/icon-person.svg");
     background-size: cover;
   }
 }
@@ -138,7 +148,7 @@
     content: "";
     width: 16px;
     height: 16px;
-    background-image: url("../../img/icon-puzzle.svg");
+    background-image: url("../img/icon-puzzle.svg");
     background-size: cover;
   }
 }
@@ -158,7 +168,10 @@
 
 @media (max-width: $mobile-width) {
   .quests {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 
   .quests__item {
