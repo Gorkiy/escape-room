@@ -77,8 +77,9 @@
 
 @media (max-width: $tablet-width) {
   .page-header {
-    padding-left: 16px;
-    padding-right: 16px;
+    position: static;
+    padding-left: 0;
+    padding-right: 0;
     flex-direction: column;
     align-items: stretch;
   }

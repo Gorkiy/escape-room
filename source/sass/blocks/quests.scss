@@ -3,11 +3,11 @@
   margin-top: 40px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 .quests__item {
   margin-bottom: 2%;
+  margin-right: 2%;
   position: relative;
   width: 32%;
 
@@ -18,6 +18,10 @@
     width: 100%;
     height: 70%;
     background: linear-gradient(0.17deg, rgba(28, 27, 27, 0.9) 5.23%, rgba(46, 46, 46, 0) 98.38%);
+  }
+
+  &:nth-child(3n) {
+    margin-right: 0;
   }
 }
 
@@ -35,6 +39,7 @@
 }
 
 .quests__item-link {
+  display: block;
   color: white;
 }
 
@@ -58,6 +63,7 @@
     height: 14px;
     background-image: url("../../img/icon-star.svg");
     background-size: cover;
+    filter: invert(50%) sepia(71%) saturate(1682%) hue-rotate(1deg) brightness(107%) contrast(70%);
   }
 }
 
@@ -89,7 +95,7 @@
   margin-bottom: 5px;
   padding-left: 20px;
   position: relative;
-  
+
   &::before {
     position: absolute;
     top: 0;
@@ -99,6 +105,7 @@
     height: 14px;
     background-image: url("../../img/icon-location-small.svg");
     background-size: cover;
+    filter: invert(50%) sepia(71%) saturate(1682%) hue-rotate(1deg) brightness(107%) contrast(70%);
   }
 }
 
@@ -133,5 +140,29 @@
     height: 16px;
     background-image: url("../../img/icon-puzzle.svg");
     background-size: cover;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .quests__item {
+    width: 49%;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+    &:nth-child(3n) {
+      margin-right: auto;
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .quests {
+    flex-direction: column;
+  }
+
+  .quests__item {
+    width: 100%;
+    margin-right: 0;
   }
 }

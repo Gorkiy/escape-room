@@ -19,42 +19,42 @@
           <a class="page-header__logo" href="index.html">
             <picture>
               <source media="(min-width: 768px)" srcset="img/logo.svg">
-                <img class="page-header__logo-image" src="img/logo-mobile.svg" width="85" height="34" alt="Escape Room">
-              </picture>
-            </a>
+              <img class="page-header__logo-image" src="img/logo-mobile.svg" width="85" height="34" alt="Escape Room">
+            </picture>
+          </a>
+        </div>
+        <nav class="page-header__nav main-nav main-nav--closed main-nav--nojs">
+          <span class="main-nav__menu-title">МЕНЮ</span>
+          <button class="main-nav__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+          <ul class="main-nav__list menu">
+            <li class="menu__item">
+              <a class="menu__link menu__link--active">Квесты</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="catalog.html">Новичкам</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="form.html">Отзывы</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="form.html">Акции</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="form.html">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="page-header__contacts page-header__contacts--closed">
+          <div class="page-header__location">
+            <svg class="page-header__city-icon" width="16" height="21" aria-hidden="true" role="presentation">
+              <use xlink:href="#icon-location"></use>
+            </svg>
+            <a class="page-header__city-link" href="#">Новосибирск</a>
           </div>
-          <nav class="page-header__nav main-nav main-nav--closed main-nav--nojs">
-            <span class="main-nav__menu-title">МЕНЮ</span>
-            <button class="main-nav__toggle" type="button">
-              <span class="visually-hidden">Открыть меню</span>
-            </button>
-            <ul class="main-nav__list menu">
-              <li class="menu__item">
-                <a class="menu__link menu__link--active">Квесты</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="catalog.html">Новичкам</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="form.html">Отзывы</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="form.html">Акции</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="form.html">Контакты</a>
-              </li>
-            </ul>
-          </nav>
-          <div class="page-header__contacts page-header__contacts--closed">
-            <div class="page-header__location">
-              <svg class="page-header__city-icon" width="16" height="21" aria-hidden="true" role="presentation">
-                <use xlink:href="#icon-location"></use>
-              </svg>
-              <a class="page-header__city-link" href="#">Новосибирск</a>
-            </div>
-            <span class="page-header__phone">8 (383) 284 01 60</span>
-          </div>
+          <span class="page-header__phone">8 (383) 284 01 60</span>
+        </div>
       </header>
       <main class="page-quests main-content">
         <section class="quest-select">
@@ -62,68 +62,70 @@
           <h1 class="quest-select__title title">
             Выберите тематику
           </h1>
-          <ul class="quest-select__genre-list genre-list">
-            <li class="genre-list__item">
-              <div class="genre-list__item-wrap">
-                <a class="genre-list__link" href="#">
-                  <svg class="genre-list__icon" width="26" height="30" aria-hidden="true" role="presentation">
-                    <use xlink:href="#icon-q_all"></use>
-                  </svg>
-                  <span class="genre-list__title genre-list__title--current">Все квесты</span>
-                </a>
-              </div>
-            </li>
-            <li class="genre-list__item">
-              <div class="genre-list__item-wrap">
-                <a class="genre-list__link" href="#">
-                  <svg class="genre-list__icon" width="36" height="30" aria-hidden="true" role="presentation">
-                    <use xlink:href="#icon-q_adventures"></use>
-                  </svg>
-                  <span class="genre-list__title">Приключения</span>
-                </a>
-              </div>
-            </li>
-            <li class="genre-list__item">
-              <div class="genre-list__item-wrap">
-                <a class="genre-list__link" href="#">
-                  <svg class="genre-list__icon" width="30" height="30" aria-hidden="true" role="presentation">
-                    <use xlink:href="#icon-q_horror"></use>
-                  </svg>
-                  <span class="genre-list__title">Ужасы</span>
-                </a>
-              </div>
-            </li>
-            <li class="genre-list__item">
-              <div class="genre-list__item-wrap">
-                <a class="genre-list__link" href="#">
-                  <svg class="genre-list__icon" width="30" height="30" aria-hidden="true" role="presentation">
-                    <use xlink:href="#icon-q_mystic"></use>
-                  </svg>
-                  <span class="genre-list__title">Мистика</span>
-                </a>
-              </div>
-            </li>
-            <li class="genre-list__item">
-              <div class="genre-list__item-wrap">
-                <a class="genre-list__link" href="#">
-                  <svg class="genre-list__icon" width="40" height="30" aria-hidden="true" role="presentation">
-                    <use xlink:href="#icon-q_detective"></use>
-                  </svg>
-                  <span class="genre-list__title">Детектив</span>
-                </a>
-              </div>
-            </li>
-            <li class="genre-list__item">
-              <div class="genre-list__item-wrap">
-                <a class="genre-list__link" href="#">
-                  <svg class="genre-list__icon" width="28" height="30" aria-hidden="true" role="presentation">
-                    <use xlink:href="#icon-q_scifi"></use>
-                  </svg>
-                  <span class="genre-list__title">Sci-fi</span>
-                </a>
-              </div>
-            </li>
-          </ul>
+          <div class="quest-select__genre-list-wrap">
+            <ul class="quest-select__genre-list genre-list">
+              <li class="genre-list__item">
+                <div class="genre-list__item-wrap">
+                  <a class="genre-list__link genre-list__link--current">
+                    <svg class="genre-list__icon" width="26" height="30" aria-hidden="true" role="presentation">
+                      <use xlink:href="#icon-q_all"></use>
+                    </svg>
+                    <span class="genre-list__title genre-list__title--current">Все квесты</span>
+                  </a>
+                </div>
+              </li>
+              <li class="genre-list__item">
+                <div class="genre-list__item-wrap">
+                  <a class="genre-list__link" href="#">
+                    <svg class="genre-list__icon" width="36" height="30" aria-hidden="true" role="presentation">
+                      <use xlink:href="#icon-q_adventures"></use>
+                    </svg>
+                    <span class="genre-list__title">Приключения</span>
+                  </a>
+                </div>
+              </li>
+              <li class="genre-list__item">
+                <div class="genre-list__item-wrap">
+                  <a class="genre-list__link" href="#">
+                    <svg class="genre-list__icon" width="30" height="30" aria-hidden="true" role="presentation">
+                      <use xlink:href="#icon-q_horror"></use>
+                    </svg>
+                    <span class="genre-list__title">Ужасы</span>
+                  </a>
+                </div>
+              </li>
+              <li class="genre-list__item">
+                <div class="genre-list__item-wrap">
+                  <a class="genre-list__link" href="#">
+                    <svg class="genre-list__icon" width="30" height="30" aria-hidden="true" role="presentation">
+                      <use xlink:href="#icon-q_mystic"></use>
+                    </svg>
+                    <span class="genre-list__title">Мистика</span>
+                  </a>
+                </div>
+              </li>
+              <li class="genre-list__item">
+                <div class="genre-list__item-wrap">
+                  <a class="genre-list__link" href="#">
+                    <svg class="genre-list__icon" width="40" height="30" aria-hidden="true" role="presentation">
+                      <use xlink:href="#icon-q_detective"></use>
+                    </svg>
+                    <span class="genre-list__title">Детектив</span>
+                  </a>
+                </div>
+              </li>
+              <li class="genre-list__item">
+                <div class="genre-list__item-wrap">
+                  <a class="genre-list__link" href="#">
+                    <svg class="genre-list__icon" width="28" height="30" aria-hidden="true" role="presentation">
+                      <use xlink:href="#icon-q_scifi"></use>
+                    </svg>
+                    <span class="genre-list__title">Sci-fi</span>
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
 
           <ul class="quest-select__quests quests">
             <li class="quests__item">
@@ -138,7 +140,8 @@
                   </div>
                 </div>
                 <div class="quests__image-box">
-                  <img class="quests__bg-image" src="img/q_select-tomb.jpg" srcset="img/q_select-tomb@2x.jpg 2x" alt="Квест склеп">
+                  <img class="quests__bg-image" src="img/q_select-tomb.jpg" srcset="img/q_select-tomb@2x.jpg 2x"
+                    alt="Квест склеп">
                 </div>
               </a>
             </li>
@@ -154,7 +157,8 @@
                   </div>
                 </div>
                 <div class="quests__image-box">
-                  <img class="quests__bg-image" src="img/q_select-maniac.jpg" srcset="img/q_select-maniac@2x.jpg 2x" alt="Квест маньяк">
+                  <img class="quests__bg-image" src="img/q_select-maniac.jpg" srcset="img/q_select-maniac@2x.jpg 2x"
+                    alt="Квест маньяк">
                 </div>
               </a>
             </li>
@@ -169,7 +173,8 @@
                   </div>
                 </div>
                 <div class="quests__image-box">
-                  <img class="quests__bg-image" src="img/q_select-ritual.jpg" srcset="img/q_select-ritual@2x.jpg 2x" alt="Квест ритуал">
+                  <img class="quests__bg-image" src="img/q_select-ritual.jpg" srcset="img/q_select-ritual@2x.jpg 2x"
+                    alt="Квест ритуал">
                 </div>
               </a>
             </li>
@@ -184,7 +189,8 @@
                   </div>
                 </div>
                 <div class="quests__image-box">
-                  <img class="quests__bg-image" src="img/q_select-ghost.jpg" srcset="img/q_select-ghost@2x.jpg 2x" alt="Квест История призраков">
+                  <img class="quests__bg-image" src="img/q_select-ghost.jpg" srcset="img/q_select-ghost@2x.jpg 2x"
+                    alt="Квест История призраков">
                 </div>
               </a>
             </li>
@@ -199,7 +205,8 @@
                   </div>
                 </div>
                 <div class="quests__image-box">
-                  <img class="quests__bg-image" src="img/q_select-mystery.jpg" srcset="img/q_select-mystery@2x.jpg 2x" alt="Квест Тайны старого особняка">
+                  <img class="quests__bg-image" src="img/q_select-mystery.jpg" srcset="img/q_select-mystery@2x.jpg 2x"
+                    alt="Квест Тайны старого особняка">
                 </div>
               </a>
             </li>
@@ -215,7 +222,8 @@
                   </div>
                 </div>
                 <div class="quests__image-box">
-                  <img class="quests__bg-image" src="img/q_select-hut.jpg" srcset="img/q_select-hut@2x.jpg 2x" alt="Квест Хижина в лесу">
+                  <img class="quests__bg-image" src="img/q_select-hut.jpg" srcset="img/q_select-hut@2x.jpg 2x"
+                    alt="Квест Хижина в лесу">
                 </div>
               </a>
             </li>
@@ -230,7 +238,8 @@
                   </div>
                 </div>
                 <div class="quests__image-box">
-                  <img class="quests__bg-image" src="img/q_select-trial.jpg" srcset="img/q_select-trial@2x.jpg 2x" alt="Квест Фатальный эксперимент">
+                  <img class="quests__bg-image" src="img/q_select-trial.jpg" srcset="img/q_select-trial@2x.jpg 2x"
+                    alt="Квест Фатальный эксперимент">
                 </div>
               </a>
             </li>
@@ -245,7 +254,8 @@
                   </div>
                 </div>
                 <div class="quests__image-box">
-                  <img class="quests__bg-image" src="img/q_select-metro.jpg" srcset="img/q_select-metro@2x.jpg 2x" alt="Квест Метро 2033">
+                  <img class="quests__bg-image" src="img/q_select-metro.jpg" srcset="img/q_select-metro@2x.jpg 2x"
+                    alt="Квест Метро 2033">
                 </div>
               </a>
             </li>
@@ -260,7 +270,8 @@
                   </div>
                 </div>
                 <div class="quests__image-box">
-                  <img class="quests__bg-image" src="img/q_select-attic.jpg" srcset="img/q_select-attic@2x.jpg 2x" alt="Квест Старый чердак">
+                  <img class="quests__bg-image" src="img/q_select-attic.jpg" srcset="img/q_select-attic@2x.jpg 2x"
+                    alt="Квест Старый чердак">
                 </div>
               </a>
             </li>
@@ -275,7 +286,8 @@
                   </div>
                 </div>
                 <div class="quests__image-box">
-                  <img class="quests__bg-image" src="img/q_select-front.jpg" srcset="img/q_select-front@2x.jpg 2x" alt="Квест Последний рубеж">
+                  <img class="quests__bg-image" src="img/q_select-front.jpg" srcset="img/q_select-front@2x.jpg 2x"
+                    alt="Квест Последний рубеж">
                 </div>
               </a>
             </li>
@@ -290,7 +302,8 @@
                   </div>
                 </div>
                 <div class="quests__image-box">
-                  <img class="quests__bg-image" src="img/q_select-mars.jpg" srcset="img/q_select-mars@2x.jpg 2x" alt="Квест Марс–2056">
+                  <img class="quests__bg-image" src="img/q_select-mars.jpg" srcset="img/q_select-mars@2x.jpg 2x"
+                    alt="Квест Марс–2056">
                 </div>
               </a>
             </li>
@@ -299,8 +312,10 @@
       </main>
       <footer class="page-footer">
         <ul class="page-footer__social social">
-          <li class="social__item"><a class="social__button social__button--insta" href="#"><span class="visually-hidden">Инстаграм</span></a></li>
-          <li class="social__item"><a class="social__button social__button--vk" href="#"><span class="visually-hidden">Вконтакте</span></a></li>
+          <li class="social__item"><a class="social__button social__button--insta" href="#"><span
+                class="visually-hidden">Инстаграм</span></a></li>
+          <li class="social__item"><a class="social__button social__button--vk" href="#"><span
+                class="visually-hidden">Вконтакте</span></a></li>
         </ul>
         <div class="page-footer__ask">
           <a class="page-footer__ask-link" href="#">Задать вопрос

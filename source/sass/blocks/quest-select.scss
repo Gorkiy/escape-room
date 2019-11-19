@@ -8,9 +8,37 @@
   margin-bottom: 45px;
 }
 
-.quest-select__genre-list {
-  // width: 90%;
-  // margin-left: 110px;
-  // padding: 100px;
-  // border: 1px solid red;
+@media (max-width: $tablet-width) {
+  .quest-select {
+    padding: 55px;
+    width: 100%;
+  }
+
+  .quest-select__genre-list-wrap {
+    position: relative;
+    margin-right: -16px;
+
+    &::after {
+      position: absolute;
+      right: 0;
+      top: 0;
+      content: "";
+      width: 48px;
+      height: 32px;
+      background: linear-gradient(270deg, #1C1B1B 0%, rgba(28, 27, 27, 0) 100%);
+    }
+  }
+
+}
+
+@media (max-width: $mobile-width) {
+  .quest-select {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  .quest-select__title {
+    margin-bottom: 40px;
+  }
 }

@@ -7,22 +7,19 @@
 .genre-list__item {
   flex-grow: 1;
   border-right: 1px solid rgba(255, 255, 255, 0.32);
-}
 
-.genre-list__item:last-child {
-  border-right: 0;
+  &:last-child {
+    border-right: 0;
+  }
 }
 
 .genre-list__item-wrap {
-  // border: 1px solid green;
   display: flex;
   min-height: 40px;
   justify-content: center;
-  // margin: 0 auto;
 }
 
 .genre-list__link {
-  // border: 1px solid red;
   display: flex;
   align-items: center;
   font-weight: bold;
@@ -30,59 +27,53 @@
   line-height: 140%;
   letter-spacing: -0.02em;
   color: $main-color;
-}
 
-.genre-list__link:hover {
-  color: $accent-color;
+  &:hover {
+    color: $accent-color;
+  }
+
+  &--current:hover {
+    color: $main-color;
+    text-decoration: none;
+  }
 }
 
 .genre-list__title {
   position: relative;
   margin-left: 12px;
+  display: inline-block;
+
+  &--current::after {
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: $accent-color;
+  }
 }
 
-.genre-list__title--current::after {
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  content: "";
-  width: 100%;
-  height: 2px;
-  background-color: $accent-color;
+@media (max-width: $tablet-width) {
+  .genre-list {
+    position: relative;
+    margin-left: -16px;
+    overflow-x: scroll;
+  }
+
+  .genre-list__item-wrap {
+    justify-content: stretch;
+    min-height: 32px;
+  }
+
+  .genre-list__item {
+    padding: 0 16px;
+    flex-shrink: 0;
+    flex-grow: 0;
+  }
+
+  .genre-list__icon {
+    height: 24px;
+    width: auto;
+  }
 }
-
-
-// .genre-list {
-//   @include list-reset();
-//   display: flex;
-//   // justify-content: center;
-// }
-//
-// .genre-list__item {
-//   flex-grow: 1;
-//   border-right: 1px solid rgba(255, 255, 255, 0.32);
-// }
-//
-// .genre-list__item:last-child {
-//   border-right: 0;
-// }
-//
-// .genre-list__item-wrap {
-//   margin: 0 40px;
-//   display: flex;
-//   min-height: 40px;
-// }
-//
-// .genre-list__link {
-//   display: flex;
-//   align-items: center;
-// }
-//
-// .genre-list__title {
-//   margin-left: 12px;
-//   font-weight: bold;
-//   font-size: 14px;
-//   line-height: 140%;
-//   letter-spacing: -0.02em;
-//   color: $main-color;
-// }
