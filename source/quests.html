@@ -45,16 +45,28 @@
               <a class="menu__link" href="form.html">Контакты</a>
             </li>
           </ul>
-        </nav>
-        <div class="page-header__contacts page-header__contacts--closed">
-          <div class="page-header__location">
-            <svg class="page-header__city-icon" width="16" height="21" aria-hidden="true" role="presentation">
-              <use xlink:href="#icon-location"></use>
-            </svg>
-            <a class="page-header__city-link" href="#">Новосибирск</a>
+          <div class="page-header__contacts">
+            <div class="page-header__location">
+              <svg class="page-header__city-icon" width="16" height="21" aria-hidden="true" role="presentation">
+                <use xlink:href="#icon-location"></use>
+              </svg>
+              <a class="page-header__city-link" href="#">Новосибирск</a>
+            </div>
+            <span class="page-header__phone">8 (383) 284 01 60</span>
           </div>
-          <span class="page-header__phone">8 (383) 284 01 60</span>
-        </div>
+          <footer class="page-footer">
+            <ul class="page-footer__social social">
+              <li class="social__item"><a class="social__button social__button--insta" href="#"><span
+                    class="visually-hidden">Инстаграм</span></a></li>
+              <li class="social__item"><a class="social__button social__button--vk" href="#"><span
+                    class="visually-hidden">Вконтакте</span></a></li>
+            </ul>
+            <div class="page-footer__ask">
+              <a class="page-footer__ask-link" href="#">Задать вопрос
+              </a>
+            </div>
+          </footer>
+        </nav>
       </header>
       <main class="page-quests main-content">
         <section class="quest-select">
@@ -310,18 +322,6 @@
           </ul>
         </section>
       </main>
-      <footer class="page-footer">
-        <ul class="page-footer__social social">
-          <li class="social__item"><a class="social__button social__button--insta" href="#"><span
-                class="visually-hidden">Инстаграм</span></a></li>
-          <li class="social__item"><a class="social__button social__button--vk" href="#"><span
-                class="visually-hidden">Вконтакте</span></a></li>
-        </ul>
-        <div class="page-footer__ask">
-          <a class="page-footer__ask-link" href="#">Задать вопрос
-          </a>
-        </div>
-      </footer>
       <!-- Modals -->
       <include src="build/components/modals.html"></include>
     </div>
