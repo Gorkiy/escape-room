@@ -9,6 +9,7 @@
 
 .button {
   padding: 15px 32px;
+  display: inline-block;
   font-weight: 800;
   font-size: 14px;
   line-height: 16px;
@@ -31,10 +32,38 @@
   background-color: #b8b8b8;
 }
 
+.back-link {
+  display: none;
+}
+
 @media (max-width: $mobile-width) {
   .title {
     font-weight: 800;
     font-size: 36px;
     line-height: 110%;
   }
+
+  .back-link {
+    padding-left: 14px;
+    position: relative;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 144%;
+    letter-spacing: 0.02em;
+    color: $main-color;
+    text-transform: uppercase;
+
+    &::before {
+      position: absolute;
+      top: 3px;
+      left: 0;
+      content: "";
+      width: 6px;
+      height: 10px;
+      background-image: url("../img/icon-back.svg");
+      background-size: cover;
+    }
+  }
 }
+
+

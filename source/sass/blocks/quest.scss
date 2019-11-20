@@ -1,0 +1,202 @@
+.quest {
+  margin-top: -15px;
+  position: absolute;
+  top: 50%;
+  left: 44%;
+  transform: translateY(-50%);
+  width: 54%;
+}
+
+.quest__description {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 150%;
+}
+
+.quest__title {
+  margin-top: 10px;
+  margin-bottom: 32px;
+  font-weight: 900;
+  font-size: 92px;
+  line-height: 95%;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+
+.quest-wrap {
+  margin-left: 30px;
+}
+
+.quest__info {
+  margin-bottom: 26px;
+}
+
+.quest__description {
+  width: 70%;
+}
+
+.quest__info--item {
+  position: relative;
+  padding-left: 25px;
+  padding-right: 25px;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 144%;
+
+  &::after {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: -5px;
+    width: 1px;
+    height: 36px;
+    background-color: rgba(255, 255, 255, 0.36);
+  }
+
+  &:last-child::after {
+    display: none;
+  }
+}
+
+.quest__time {
+  padding-left: 30px;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-image: url("../img/icon-clock.svg");
+    background-size: cover;
+  }
+}
+
+.quest__people {
+  padding-left: 49px;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 22px;
+    content: "";
+    width: 16px;
+    height: 21px;
+    background-image: url("../img/icon-person.svg");
+    background-size: cover;
+  }
+}
+
+.quest__difficulty {
+  padding-left: 53px;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 22px;
+    content: "";
+    width: 21px;
+    height: 21px;
+    background-image: url("../img/icon-puzzle.svg");
+    background-size: cover;
+  }
+}
+
+.quest__button {
+  margin-top: 30px;
+  padding: 22px 48px;
+  font-weight: 800;
+  font-size: 17px;
+  line-height: 20px;
+  letter-spacing: 0.03em;
+}
+
+@media (max-width: $tablet-width) {
+  .quest {
+    margin: 0;
+    left: 30%;
+    width: 65%;
+  }
+
+  .quest__description {
+    width: 100%;
+  }
+
+}
+
+@media (max-width: $mobile-width) {
+  .quest {
+    padding-top: 285px;
+    position: static;
+    width: 100%;
+    transform: none;
+  }
+
+  .quest__title {
+    margin-bottom: 45px;
+    font-weight: 900;
+    font-size: 42px;
+    line-height: 110%;
+  }
+
+  .quest-wrap {
+    margin-left: 0;
+  }
+
+  .quest__info {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .quest__info--item {
+    min-width: 33%;
+    text-align: center;
+    padding: 0;
+
+    &::after {
+      top: -25px;
+      height: 48px;
+    }
+  }
+
+  .quest__time {
+    padding: 0;
+
+    &::before {
+      position: absolute;
+      top: -27px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .quest__people {
+    padding: 0;
+
+    &::before {
+      position: absolute;
+      top: -27px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .quest__difficulty {
+    padding: 0;
+
+    &::before {
+      position: absolute;
+      top: -27px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .quest__button {
+    // margin-top: 30px;
+    margin-bottom: 60px;
+  }
+
+}

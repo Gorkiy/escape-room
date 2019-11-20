@@ -16,7 +16,7 @@
     <div class="page-container">
       <header class="page-header page-header--transparent">
         <div class="page-header__logo-wrap">
-          <a class="page-header__logo" href="#">
+          <a class="page-header__logo" href="index.html">
             <picture>
               <source media="(min-width: 768px)" srcset="img/logo.svg">
               <img class="page-header__logo-image" src="img/logo-mobile.svg" width="85" height="34" alt="Escape Room">
@@ -30,7 +30,7 @@
           </button>
           <ul class="main-nav__list menu">
             <li class="menu__item">
-              <a href="quests.html" class="menu__link">Квесты</a>
+              <a class="menu__link menu__link--active">Квесты</a>
             </li>
             <li class="menu__item">
               <a class="menu__link" href="catalog.html">Новичкам</a>
@@ -68,26 +68,39 @@
           </footer>
         </nav>
       </header>
-      <main class="page-main main-content">
-        <section class="main-program">
-          <h1 class="main-program__title title">
-            Лучшие квесты в&nbsp;Новосибирске
+      <main class="page-quest main-content">
+        <a class="back-link" href="quests.html">все квесты</a>
+        <section class="page-quest__single quest">
+          <span class="quest__breadcrumb breadcrumb">хоррор, триллер</span>
+          <h1 class="quest__title">
+            Маньяк
           </h1>
-          <p class="main-program__description">Надоело проводить свободное время лёжа на диване? Игровые площадки
-            questroom на целый час погружают вас в мир незабываемых авантюр. Ищите подсказки, решайте головоломки и
-            находите выход из комнаты!</p>
-          <a class="main-program__button button" href="#">
-            Выбрать квест
-          </a>
+          <div class="quest-wrap">
+            <div class="quest__info">
+              <span class="quest__info--item quest__time">60 мин</span>
+              <span class="quest__info--item quest__people">3–4 чел</span>
+              <span class="quest__info--item quest__difficulty">средняя сложность</span>
+            </div>
+            <p class="quest__description">В комнате с приглушённым светом несколько человек, незнакомых друг с другом,
+              приходят в себя. Никто не помнит, что произошло прошлым вечером. Руки и ноги связаным, но одному из вас
+              получилось освободиться. На стене висит пугающий таймер и запущен отстёт 60 минут. Сможете ли вы
+              разобраться
+              в стрессовой ситуации, помочь другим, разобраться что произошло и выбраться из комнаты?</p>
+            <a class="quest__button button" href="#">
+              Забронировать
+            </a>
+          </div>
         </section>
       </main>
       <!-- Modals -->
       <include src="build/components/modals.html"></include>
       <!-- background -->
-      <div class="page-container__bg">
+      <div class="page-container__bg page-container__bg--quest">
         <picture>
-          <source type="image/jpeg" media="(min-width: 768px)" srcset="img/bg.jpg 1x, img/bg@2x.jpg 2x">
-          <img class="page-container__bg-image" src="img/bg-mobile.jpg" srcset="img/bg-mobile@2x.jpg 2x" alt="">
+          <source type="image/jpeg" media="(min-width: 768px)"
+            srcset="img/bg_q-maniac.jpg 1x, img/bg_q-maniac@2x.jpg 2x">
+          <img class="page-container__bg-image" src="img/bg_q-maniac-mobile.jpg"
+            srcset="img/bg_q-maniac-mobile@2x.jpg 2x" alt="">
         </picture>
       </div>
     </div>

@@ -11,10 +11,10 @@
   justify-content: space-between;
   align-items: center;
   background-color: #1c1c1c;
-}
 
-.page-header--main {
-  background: none;
+  &--transparent {
+    background: none;
+  }
 }
 
 .page-header__logo-wrap {
@@ -49,11 +49,11 @@
   letter-spacing: 0.02em;
   text-transform: uppercase;
   color: $accent-color;
-}
 
-.page-header__city-link:hover {
-  text-decoration: none;
-  border-bottom: 1px $accent-color dashed;
+  &:hover {
+    text-decoration: none;
+    border-bottom: 1px $accent-color dashed;
+  }
 }
 
 .page-header__city-icon {
