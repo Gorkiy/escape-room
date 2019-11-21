@@ -28,7 +28,7 @@
           </button>
           <ul class="main-nav__list menu">
             <li class="menu__item">
-              <a class="menu__link menu__link--active">Квесты</a>
+              <a class="menu__link" href="quests.html">Квесты</a>
             </li>
             <li class="menu__item">
               <a class="menu__link" href="catalog.html">Новичкам</a>
@@ -72,248 +72,98 @@
           </footer>
         </nav>
       </header>
-      <main class="page-quests main-content">
-        <section class="quest-select">
-          <span class="quest-select__breadcrumb breadcrumb">квесты в Новосибирске</span>
-          <h1 class="visually-hidden">
-            Выбор квестов в Новосибирске по тематике
-          </h1>
-          <h2 class="quest-select__title title">
-            Выберите тематику
-          </h2>
-          <div class="quest-select__genre-list-wrap">
-            <ul class="quest-select__genre-list genre-list">
-              <li class="genre-list__item">
-                <div class="genre-list__item-wrap">
-                  <a class="genre-list__link genre-list__link--current">
-                    <svg class="genre-list__icon" width="26" height="30" aria-hidden="true" role="presentation">
-                      <use xlink:href="#icon-q_all"></use>
-                    </svg>
-                    <span class="genre-list__title genre-list__title--current">Все квесты</span>
-                  </a>
-                </div>
-              </li>
-              <li class="genre-list__item">
-                <div class="genre-list__item-wrap">
-                  <a class="genre-list__link" href="#">
-                    <svg class="genre-list__icon" width="36" height="30" aria-hidden="true" role="presentation">
-                      <use xlink:href="#icon-q_adventures"></use>
-                    </svg>
-                    <span class="genre-list__title">Приключения</span>
-                  </a>
-                </div>
-              </li>
-              <li class="genre-list__item">
-                <div class="genre-list__item-wrap">
-                  <a class="genre-list__link" href="#">
-                    <svg class="genre-list__icon" width="30" height="30" aria-hidden="true" role="presentation">
-                      <use xlink:href="#icon-q_horror"></use>
-                    </svg>
-                    <span class="genre-list__title">Ужасы</span>
-                  </a>
-                </div>
-              </li>
-              <li class="genre-list__item">
-                <div class="genre-list__item-wrap">
-                  <a class="genre-list__link" href="#">
-                    <svg class="genre-list__icon" width="30" height="30" aria-hidden="true" role="presentation">
-                      <use xlink:href="#icon-q_mystic"></use>
-                    </svg>
-                    <span class="genre-list__title">Мистика</span>
-                  </a>
-                </div>
-              </li>
-              <li class="genre-list__item">
-                <div class="genre-list__item-wrap">
-                  <a class="genre-list__link" href="#">
-                    <svg class="genre-list__icon" width="40" height="30" aria-hidden="true" role="presentation">
-                      <use xlink:href="#icon-q_detective"></use>
-                    </svg>
-                    <span class="genre-list__title">Детектив</span>
-                  </a>
-                </div>
-              </li>
-              <li class="genre-list__item">
-                <div class="genre-list__item-wrap">
-                  <a class="genre-list__link" href="#">
-                    <svg class="genre-list__icon" width="28" height="30" aria-hidden="true" role="presentation">
-                      <use xlink:href="#icon-q_scifi"></use>
-                    </svg>
-                    <span class="genre-list__title">Sci-fi</span>
-                  </a>
-                </div>
-              </li>
+      <main class="page-order main-content">
+        <section class="order">
+          <div class="order__title-wrap">
+            <a class="order-link back-link" href="maniac.html">описание</a>
+            <span class="order__breadcrumb breadcrumb">выбранный квест</span>
+            <h1 class="visually-hidden">
+              Квест в Новосибирске по тематике
+            </h1>
+            <h2 class="order__title title title--quest">
+              Маньяк
+              <!-- Хищина в старом лесу -->
+              <!-- Таинственный лес -->
+            </h2>
+          </div>
+          <div class="order__selected-options">
+            <span>Вы выбрали игру 22 марта в 16:00.</span>
+            <span>К оплате 1500 рублей.</span>
+          </div>
+          <div class="order__pay-wrap">
+            <a class="order__pay simple-button" href="#">Перейти к оплате</a>
+          </div>
+          <div class="order__booking-wrap">
+            <div class="order__date-wrap">
+              <a class="order__select-date simple-button" href="#">Выберите дату</a>
+              <span class="order__date" href="#">22 марта
+            </span></div>
+            <ul class="order__legend legend">
+              <li class="legend__item">— свободно</li>
+              <li class="legend__item legend__item--booked">— занято</li>
+              <li class="legend__item legend__item--selected">— выбрано вами</li>
             </ul>
           </div>
-
-          <ul class="quest-select__quests quests">
-            <li class="quests__item">
-              <a class="quests__item-link" href="#">
-                <span class="quests__hit">Хит</span>
-                <div class="quests__info">
-                  <h3 class="quests__name">Склеп</h3>
-                  <span class="quests__address">пр. Ленина, 37</span>
-                  <div class="quests__details">
-                    <span class="quests__people">2–5 чел</span>
-                    <span class="quests__difficulty">cложный</span>
-                  </div>
-                </div>
-                <div class="quests__image-box">
-                  <img class="quests__bg-image" src="img/q_select-tomb.jpg" srcset="img/q_select-tomb@2x.jpg 2x" alt="Квест склеп">
-                </div>
-              </a>
+          <ul class="order__time-picker time-picker">
+            <li class="time-picker__option">
+              <input class="time-picker__time visually-hidden" type="radio" name="time" id="945">
+              <label class="time-picker__label" for="945">9:45</label>
+              <span class="time-picker__price">1400 ₽</span>
             </li>
-            <li class="quests__item">
-              <a class="quests__item-link" href="maniac.html">
-                <span class="quests__hit">Хит</span>
-                <div class="quests__info">
-                  <h3 class="quests__name">Маньяк</h3>
-                  <span class="quests__address">Верхнетецкая, 32</span>
-                  <div class="quests__details">
-                    <span class="quests__people">3–6 чел</span>
-                    <span class="quests__difficulty">средний</span>
-                  </div>
-                </div>
-                <div class="quests__image-box">
-                  <img class="quests__bg-image" src="img/q_select-maniac.jpg" srcset="img/q_select-maniac@2x.jpg 2x" alt="Квест маньяк">
-                </div>
-              </a>
+            <li class="time-picker__option">
+              <input class="time-picker__time visually-hidden" type="radio" name="time" id="1100">
+              <label class="time-picker__label" for="1100">11:00</label>
+              <span class="time-picker__price">1400 ₽</span>
             </li>
-            <li class="quests__item">
-              <a class="quests__item-link" href="#">
-                <div class="quests__info">
-                  <h3 class="quests__name">Ритуал</h3>
-                  <span class="quests__address">пр. Ленина, 37</span>
-                  <div class="quests__details">
-                    <span class="quests__people">3–5 чел</span>
-                    <span class="quests__difficulty">сложный</span>
-                  </div>
-                </div>
-                <div class="quests__image-box">
-                  <img class="quests__bg-image" src="img/q_select-ritual.jpg" srcset="img/q_select-ritual@2x.jpg 2x" alt="Квест ритуал">
-                </div>
-              </a>
+            <li class="time-picker__option">
+              <input class="time-picker__time visually-hidden" type="radio" name="time" id="1215" disabled="">
+              <label class="time-picker__label" for="1215">12:15</label>
+              <span class="time-picker__price">1400 ₽</span>
             </li>
-            <li class="quests__item">
-              <a class="quests__item-link" href="#">
-                <div class="quests__info">
-                  <h3 class="quests__name">История призраков</h3>
-                  <span class="quests__address">Новослободская, 2а</span>
-                  <div class="quests__details">
-                    <span class="quests__people">5–6 чел</span>
-                    <span class="quests__difficulty">легкий</span>
-                  </div>
-                </div>
-                <div class="quests__image-box">
-                  <img class="quests__bg-image" src="img/q_select-ghost.jpg" srcset="img/q_select-ghost@2x.jpg 2x" alt="Квест История призраков">
-                </div>
-              </a>
+            <li class="time-picker__option">
+              <input class="time-picker__time visually-hidden" type="radio" name="time" id="1330" disabled="">
+              <label class="time-picker__label" for="1330">13:30</label>
+              <span class="time-picker__price">1400 ₽</span>
             </li>
-            <li class="quests__item">
-              <a class="quests__item-link" href="#">
-                <div class="quests__info">
-                  <h3 class="quests__name">Тайны старого особняка</h3>
-                  <span class="quests__address">пр. Ленина, 27</span>
-                  <div class="quests__details">
-                    <span class="quests__people">2–5 чел</span>
-                    <span class="quests__difficulty">легкий</span>
-                  </div>
-                </div>
-                <div class="quests__image-box">
-                  <img class="quests__bg-image" src="img/q_select-mystery.jpg" srcset="img/q_select-mystery@2x.jpg 2x" alt="Квест Тайны старого особняка">
-                </div>
-              </a>
+            <li class="time-picker__option">
+              <input class="time-picker__time visually-hidden" type="radio" name="time" id="1445">
+              <label class="time-picker__label" for="1445">14:45</label>
+              <span class="time-picker__price">1400 ₽</span>
             </li>
-            <li class="quests__item">
-              <a class="quests__item-link" href="#">
-                <span class="quests__hit">Хит</span>
-                <div class="quests__info">
-                  <h3 class="quests__name">Хижина в лесу</h3>
-                  <span class="quests__address">Верхнетецкая, 32</span>
-                  <div class="quests__details">
-                    <span class="quests__people">4–7 чел</span>
-                    <span class="quests__difficulty">средний</span>
-                  </div>
-                </div>
-                <div class="quests__image-box">
-                  <img class="quests__bg-image" src="img/q_select-hut.jpg" srcset="img/q_select-hut@2x.jpg 2x" alt="Квест Хижина в лесу">
-                </div>
-              </a>
+            <li class="time-picker__option">
+              <input class="time-picker__time visually-hidden" type="radio" name="time" id="1600" checked="">
+              <label class="time-picker__label" for="1600">16:00</label>
+              <span class="time-picker__price">1500 ₽</span>
             </li>
-            <li class="quests__item">
-              <a class="quests__item-link" href="#">
-                <div class="quests__info">
-                  <h3 class="quests__name">Фатальный эксперимент</h3>
-                  <span class="quests__address">Верхнетецкая, 32</span>
-                  <div class="quests__details">
-                    <span class="quests__people">5–8 чел</span>
-                    <span class="quests__difficulty">сложный</span>
-                  </div>
-                </div>
-                <div class="quests__image-box">
-                  <img class="quests__bg-image" src="img/q_select-trial.jpg" srcset="img/q_select-trial@2x.jpg 2x" alt="Квест Фатальный эксперимент">
-                </div>
-              </a>
+            <li class="time-picker__option">
+              <input class="time-picker__time visually-hidden" type="radio" name="time" id="1715" disabled="">
+              <label class="time-picker__label" for="1715">17:15</label>
+              <span class="time-picker__price">1500 ₽</span>
             </li>
-            <li class="quests__item">
-              <a class="quests__item-link" href="#">
-                <div class="quests__info">
-                  <h3 class="quests__name">Метро 2033</h3>
-                  <span class="quests__address">Новослободская, 2а</span>
-                  <div class="quests__details">
-                    <span class="quests__people">6–8 чел</span>
-                    <span class="quests__difficulty">средний</span>
-                  </div>
-                </div>
-                <div class="quests__image-box">
-                  <img class="quests__bg-image" src="img/q_select-metro.jpg" srcset="img/q_select-metro@2x.jpg 2x" alt="Квест Метро 2033">
-                </div>
-              </a>
+            <li class="time-picker__option">
+              <input class="time-picker__time visually-hidden" type="radio" name="time" id="1830">
+              <label class="time-picker__label" for="1830">18:30</label>
+              <span class="time-picker__price">1500 ₽</span>
             </li>
-            <li class="quests__item">
-              <a class="quests__item-link" href="#">
-                <div class="quests__info">
-                  <h3 class="quests__name">Старый чердак</h3>
-                  <span class="quests__address">Новослободская, 2а</span>
-                  <div class="quests__details">
-                    <span class="quests__people">2–3 чел</span>
-                    <span class="quests__difficulty">легкий</span>
-                  </div>
-                </div>
-                <div class="quests__image-box">
-                  <img class="quests__bg-image" src="img/q_select-attic.jpg" srcset="img/q_select-attic@2x.jpg 2x" alt="Квест Старый чердак">
-                </div>
-              </a>
+            <li class="time-picker__option">
+              <input class="time-picker__time visually-hidden" type="radio" name="time" id="1945">
+              <label class="time-picker__label" for="1945">19:45</label>
+              <span class="time-picker__price">1500 ₽</span>
             </li>
-            <li class="quests__item">
-              <a class="quests__item-link" href="#">
-                <div class="quests__info">
-                  <h3 class="quests__name">Последний рубеж</h3>
-                  <span class="quests__address">Верхнетецкая, 32</span>
-                  <div class="quests__details">
-                    <span class="quests__people">4–7 чел</span>
-                    <span class="quests__difficulty">средний</span>
-                  </div>
-                </div>
-                <div class="quests__image-box">
-                  <img class="quests__bg-image" src="img/q_select-front.jpg" srcset="img/q_select-front@2x.jpg 2x" alt="Квест Последний рубеж">
-                </div>
-              </a>
+            <li class="time-picker__option">
+              <input class="time-picker__time visually-hidden" type="radio" name="time" id="2100">
+              <label class="time-picker__label" for="2100">21:00</label>
+              <span class="time-picker__price">1800 ₽</span>
             </li>
-            <li class="quests__item">
-              <a class="quests__item-link" href="#">
-                <div class="quests__info">
-                  <h3 class="quests__name">Марс–2056</h3>
-                  <span class="quests__address">пр. Ленина, 37</span>
-                  <div class="quests__details">
-                    <span class="quests__people">2–4 чел</span>
-                    <span class="quests__difficulty">легкий</span>
-                  </div>
-                </div>
-                <div class="quests__image-box">
-                  <img class="quests__bg-image" src="img/q_select-mars.jpg" srcset="img/q_select-mars@2x.jpg 2x" alt="Квест Марс–2056">
-                </div>
-              </a>
+            <li class="time-picker__option">
+              <input class="time-picker__time visually-hidden" type="radio" name="time" id="2215" disabled="">
+              <label class="time-picker__label" for="2215">22:15</label>
+              <span class="time-picker__price">1800 ₽</span>
+            </li>
+            <li class="time-picker__option">
+              <input class="time-picker__time visually-hidden" type="radio" name="time" id="2330" disabled="">
+              <label class="time-picker__label" for="2330">23:30</label>
+              <span class="time-picker__price">2000 ₽</span>
             </li>
           </ul>
         </section>
