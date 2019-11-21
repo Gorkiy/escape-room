@@ -1,0 +1,57 @@
+.legend {
+  @include list-reset();
+  margin-top: 25px;
+  display: flex;
+}
+
+.legend__item {
+  position: relative;
+  margin-right: 24px;
+  padding-left: 22px;
+  display: inline-block;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 144%;
+
+  &::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #C4C4C4;
+    border-radius: 3px;
+  }
+}
+
+.legend__item--booked::before {
+  border: none;
+  background: linear-gradient(158.6deg, #F2890F 9.78%, #B8600F 79.81%);
+}
+
+.legend__item--selected::before {
+  border: none;
+  background: linear-gradient(180deg, #2CDB52 0%, #13BA19 100%);
+}
+
+@media (max-width: $mobile-width) {
+.legend {
+  justify-content: space-between;
+}
+
+  .legend__item {
+    margin-right: 0;
+
+    &::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 0;
+      width: 15px;
+      height: 15px;
+      border: 2px solid #C4C4C4;
+      border-radius: 3px;
+    }
+  }
+}

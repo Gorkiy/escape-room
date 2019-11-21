@@ -1,0 +1,126 @@
+.order {
+  margin: 0 auto;
+  margin-top: 54px;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.order__booking-wrap {
+  position: relative;
+  margin-top: 12px;
+  padding-left: 45px;
+  width: 100%;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: -20px;
+    left: 0;
+    width: 100%;
+    opacity: 0.25;
+    border: 0.5px solid $main-color;
+  }
+}
+
+.quest__select-date {
+  margin-top: 20px;
+}
+
+.order__title-wrap {
+  flex-grow: 1;
+  max-width: 60%;
+}
+
+.order__selected-options {
+  display: flex;
+  max-width: 160px;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: 38px;
+}
+
+.order__pay-wrap {
+  flex-shrink: 0;
+  flex-grow: 1;
+  text-align: center;
+  align-self: flex-end;
+  margin-bottom: 52px;
+}
+
+.order__date-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.order__date {
+  margin-left: 30px;
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 144%;
+}
+
+@media (max-width: $tablet-width) {
+  .order__header {
+    flex-wrap: wrap;
+  }
+
+  .order__title {
+    font-weight: 900;
+    font-size: 42px;
+    line-height: 110%;
+  }
+
+  .order__title-wrap {
+    flex-grow: 1;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .order {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  .order-link {
+    margin-top: 5px;
+    margin-bottom: 28px;
+  }
+
+  .order__title {
+    font-weight: 900;
+    font-size: 42px;
+    line-height: 110%;
+  }
+
+  .order__title-wrap {
+    order: 1;
+    max-width: 100%;
+  }
+
+  .order__booking-wrap {
+    order: 2;
+    margin-top: 10px;
+    padding-left: 0;
+
+    &::after {
+      top: -30px;
+    }
+  }
+
+  .order__selected-options {
+    order: 4;
+    max-width: 100%;
+  }
+
+  .order__pay-wrap {
+    order: 5;
+    text-align: left;
+  }
+
+  .order__time-picker {
+    order: 3;
+  }
+}
