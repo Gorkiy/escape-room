@@ -18,17 +18,13 @@
     <div class="page-container">
       <header class="page-header page-header--transparent">
         <div class="page-header__logo-wrap">
-          <a class="page-header__logo" href="#">
-            <picture>
-              <source media="(min-width: 768px)" srcset="img/logo.svg">
-              <img class="page-header__logo-image" src="img/logo-mobile.svg" width="85" height="34" alt="Escape Room">
-            </picture>
+          <a class="page-header__logo">
+            <img class="page-header__logo-image" src="img/logo.svg" width="85" height="34" alt="Escape Room">
           </a>
         </div>
         <nav class="page-header__nav main-nav main-nav--closed main-nav--nojs">
-          <span class="main-nav__menu-title">МЕНЮ</span>
           <button class="main-nav__toggle" type="button">
-            <span class="visually-hidden">Открыть меню</span>
+            <span class="main-nav__menu-title">МЕНЮ</span>
           </button>
           <ul class="main-nav__list menu">
             <li class="menu__item">
@@ -54,12 +50,23 @@
               </svg>
               <a class="page-header__city-link" href="#">Новосибирск</a>
             </div>
-            <span class="page-header__phone">8 (383) 284 01 60</span>
+            <a class="page-header__phone" href="tel:+73832840160">8 (383) 284 01 60</a>
           </div>
           <footer class="page-footer page-footer--main">
             <ul class="page-footer__social social">
-              <li class="social__item"><a class="social__button social__button--insta" href="#"><span class="visually-hidden">Инстаграм</span></a></li>
-              <li class="social__item"><a class="social__button social__button--vk" href="#"><span class="visually-hidden">Вконтакте</span></a></li>
+              <li class="social__item">
+                <a class="social__button social__button--insta" href="#">
+                  <!-- <svg class="page-header__city-icon" width="16" height="21" aria-hidden="true" role="presentation">
+                    <use xlink:href="#instagram"></use>
+                  </svg> -->
+                  <span class="visually-hidden">Инстаграм</span>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__button social__button--vk" href="#">
+                  <span class="visually-hidden">Вконтакте</span>
+                </a>
+              </li>
             </ul>
             <div class="page-footer__ask">
               <a class="page-footer__ask-link" href="#">Задать вопрос
@@ -68,7 +75,7 @@
           </footer>
         </nav>
       </header>
-      <main class="page-main main-content">
+      <main class="page-main main-content main-content--centered">
         <section class="main-program">
           <h1 class="main-program__title title">
             Лучшие квесты в&nbsp;Новосибирске

@@ -8,37 +8,70 @@
 }
 
 .social__button {
+  position: relative;
   display: inline-block;
   width: 28px;
   height: 28px;
   background-repeat: no-repeat;
   background-size: cover;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+  }
 }
 
 .social__button--insta {
   background-image: url("../img/instagram.svg");
+
+  &::after {
+    opacity: 0;
+    background-image: url("../img/instagram-hover.svg");
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+
+  &:hover {
+    background-image: none;
+  }
 }
 
 .social__button--vk {
   background-image: url("../img/vk.svg");
-}
 
-.social__button--insta:hover {
-  background-image: url("../img/instagram-hover.svg");
-}
+  &::after {
+    opacity: 0;
+    background-image: url("../img/vk-hover.svg");
+  }
 
-.social__button--vk:hover {
-  background-image: url("../img/vk-hover.svg");
+  &:hover::after {
+    opacity: 1;
+  }
+
+  &:hover {
+    background-image: none;
+  }
 }
 
 .social__button:active {
   opacity: 0.5;
 }
 
-@media (max-width: $mobile-width) {
+@media (max-width: $tablet-width) {
   .social__button {
     width: 36px;
     height: 36px;
+
+    &::after {
+      width: 36px;
+      height: 36px;
+      background-size: cover;
+    }
   }
 
   .social__item {

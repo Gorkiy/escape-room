@@ -28,11 +28,11 @@
   color: $main-color;
   text-decoration: none;
   border-bottom: 1px $main-color dashed;
-}
 
-.page-footer__ask-link:hover {
-  color: $accent-color;
-  border-bottom: 1px $accent-color dashed;
+  &:hover {
+    color: $accent-color;
+    border-bottom: 1px $accent-color dashed;
+  }
 }
 
 @media (max-width: $mobile-width) {

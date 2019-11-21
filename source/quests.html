@@ -17,16 +17,12 @@
       <header class="page-header">
         <div class="page-header__logo-wrap">
           <a class="page-header__logo" href="index.html">
-            <picture>
-              <source media="(min-width: 768px)" srcset="img/logo.svg">
-              <img class="page-header__logo-image" src="img/logo-mobile.svg" width="85" height="34" alt="Escape Room">
-            </picture>
+            <img class="page-header__logo-image" src="img/logo.svg" width="85" height="34" alt="Escape Room">
           </a>
         </div>
         <nav class="page-header__nav main-nav main-nav--closed main-nav--nojs">
-          <span class="main-nav__menu-title">МЕНЮ</span>
           <button class="main-nav__toggle" type="button">
-            <span class="visually-hidden">Открыть меню</span>
+            <span class="main-nav__menu-title">МЕНЮ</span>
           </button>
           <ul class="main-nav__list menu">
             <li class="menu__item">
@@ -71,9 +67,12 @@
       <main class="page-quests main-content">
         <section class="quest-select">
           <span class="quest-select__breadcrumb breadcrumb">квесты в Новосибирске</span>
-          <h1 class="quest-select__title title">
-            Выберите тематику
+          <h1 class="visually-hidden">
+            Выбор квестов в Новосибирске по тематике
           </h1>
+          <h2 class="quest-select__title title">
+            Выберите тематику
+          </h2>
           <div class="quest-select__genre-list-wrap">
             <ul class="quest-select__genre-list genre-list">
               <li class="genre-list__item">
@@ -144,7 +143,7 @@
               <a class="quests__item-link" href="#">
                 <span class="quests__hit">Хит</span>
                 <div class="quests__info">
-                  <span class="quests__name">Склеп</span>
+                  <h3 class="quests__name">Склеп</h3>
                   <span class="quests__address">пр. Ленина, 37</span>
                   <div class="quests__details">
                     <span class="quests__people">2–5 чел</span>
@@ -161,7 +160,7 @@
               <a class="quests__item-link" href="maniac.html">
                 <span class="quests__hit">Хит</span>
                 <div class="quests__info">
-                  <span class="quests__name">Маньяк</span>
+                  <h3 class="quests__name">Маньяк</h3>
                   <span class="quests__address">Верхнетецкая, 32</span>
                   <div class="quests__details">
                     <span class="quests__people">3–6 чел</span>
@@ -177,7 +176,7 @@
             <li class="quests__item">
               <a class="quests__item-link" href="#">
                 <div class="quests__info">
-                  <span class="quests__name">Ритуал</span>
+                  <h3 class="quests__name">Ритуал</h3>
                   <span class="quests__address">пр. Ленина, 37</span>
                   <div class="quests__details">
                     <span class="quests__people">3–5 чел</span>
@@ -193,7 +192,7 @@
             <li class="quests__item">
               <a class="quests__item-link" href="#">
                 <div class="quests__info">
-                  <span class="quests__name">История призраков</span>
+                  <h3 class="quests__name">История призраков</h3>
                   <span class="quests__address">Новослободская, 2а</span>
                   <div class="quests__details">
                     <span class="quests__people">5–6 чел</span>
@@ -209,7 +208,7 @@
             <li class="quests__item">
               <a class="quests__item-link" href="#">
                 <div class="quests__info">
-                  <span class="quests__name">Тайны старого особняка</span>
+                  <h3 class="quests__name">Тайны старого особняка</h3>
                   <span class="quests__address">пр. Ленина, 27</span>
                   <div class="quests__details">
                     <span class="quests__people">2–5 чел</span>
@@ -226,7 +225,7 @@
               <a class="quests__item-link" href="#">
                 <span class="quests__hit">Хит</span>
                 <div class="quests__info">
-                  <span class="quests__name">Хижина в лесу</span>
+                  <h3 class="quests__name">Хижина в лесу</h3>
                   <span class="quests__address">Верхнетецкая, 32</span>
                   <div class="quests__details">
                     <span class="quests__people">4–7 чел</span>
@@ -242,7 +241,7 @@
             <li class="quests__item">
               <a class="quests__item-link" href="#">
                 <div class="quests__info">
-                  <span class="quests__name">Фатальный эксперимент</span>
+                  <h3 class="quests__name">Фатальный эксперимент</h3>
                   <span class="quests__address">Верхнетецкая, 32</span>
                   <div class="quests__details">
                     <span class="quests__people">5–8 чел</span>
@@ -258,7 +257,7 @@
             <li class="quests__item">
               <a class="quests__item-link" href="#">
                 <div class="quests__info">
-                  <span class="quests__name">Метро 2033</span>
+                  <h3 class="quests__name">Метро 2033</h3>
                   <span class="quests__address">Новослободская, 2а</span>
                   <div class="quests__details">
                     <span class="quests__people">6–8 чел</span>
@@ -274,7 +273,7 @@
             <li class="quests__item">
               <a class="quests__item-link" href="#">
                 <div class="quests__info">
-                  <span class="quests__name">Старый чердак</span>
+                  <h3 class="quests__name">Старый чердак</h3>
                   <span class="quests__address">Новослободская, 2а</span>
                   <div class="quests__details">
                     <span class="quests__people">2–3 чел</span>
@@ -290,7 +289,7 @@
             <li class="quests__item">
               <a class="quests__item-link" href="#">
                 <div class="quests__info">
-                  <span class="quests__name">Последний рубеж</span>
+                  <h3 class="quests__name">Последний рубеж</h3>
                   <span class="quests__address">Верхнетецкая, 32</span>
                   <div class="quests__details">
                     <span class="quests__people">4–7 чел</span>
@@ -306,7 +305,7 @@
             <li class="quests__item">
               <a class="quests__item-link" href="#">
                 <div class="quests__info">
-                  <span class="quests__name">Марс–2056</span>
+                  <h3 class="quests__name">Марс–2056</h3>
                   <span class="quests__address">пр. Ленина, 37</span>
                   <div class="quests__details">
                     <span class="quests__people">2–4 чел</span>

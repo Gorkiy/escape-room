@@ -1,13 +1,11 @@
 .quest {
-  margin-top: -15px;
-  position: absolute;
-  top: 50%;
-  left: 44%;
-  transform: translateY(-50%);
-  width: 54%;
+  margin-top: -30px;
+  width: 56%;
+  margin-left: auto;
 }
 
 .quest__description {
+  width: 70%;
   font-weight: 500;
   font-size: 15px;
   line-height: 150%;
@@ -29,10 +27,6 @@
 
 .quest__info {
   margin-bottom: 26px;
-}
-
-.quest__description {
-  width: 70%;
 }
 
 .quest__info--item {
@@ -114,20 +108,17 @@
 
 @media (max-width: $tablet-width) {
   .quest {
-    margin: 0;
-    left: 30%;
-    width: 65%;
+    width: 70%;
   }
 
   .quest__description {
-    width: 100%;
+    width: 85%;
   }
 
 }
 
 @media (max-width: $mobile-width) {
   .quest {
-    padding-top: 285px;
     position: static;
     width: 100%;
     transform: none;
@@ -138,6 +129,10 @@
     font-weight: 900;
     font-size: 42px;
     line-height: 110%;
+  }
+
+  .quest__description {
+    width: 100%;
   }
 
   .quest-wrap {
@@ -195,7 +190,6 @@
   }
 
   .quest__button {
-    // margin-top: 30px;
     margin-bottom: 60px;
   }
 

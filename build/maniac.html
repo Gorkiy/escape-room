@@ -19,20 +19,16 @@
       <header class="page-header page-header--transparent">
         <div class="page-header__logo-wrap">
           <a class="page-header__logo" href="index.html">
-            <picture>
-              <source media="(min-width: 768px)" srcset="img/logo.svg">
-              <img class="page-header__logo-image" src="img/logo-mobile.svg" width="85" height="34" alt="Escape Room">
-            </picture>
+            <img class="page-header__logo-image" src="img/logo.svg" width="85" height="34" alt="Escape Room">
           </a>
         </div>
         <nav class="page-header__nav main-nav main-nav--closed main-nav--nojs">
-          <span class="main-nav__menu-title">МЕНЮ</span>
           <button class="main-nav__toggle" type="button">
-            <span class="visually-hidden">Открыть меню</span>
+            <span class="main-nav__menu-title">МЕНЮ</span>
           </button>
           <ul class="main-nav__list menu">
             <li class="menu__item">
-              <a class="menu__link menu__link--active">Квесты</a>
+              <a class="menu__link" href="quests.html">Квесты</a>
             </li>
             <li class="menu__item">
               <a class="menu__link" href="catalog.html">Новичкам</a>
@@ -68,9 +64,10 @@
           </footer>
         </nav>
       </header>
-      <main class="page-quest main-content">
-        <a class="back-link" href="quests.html">все квесты</a>
+      <main class="page-quest main-content main-content--centered">
+
         <section class="page-quest__single quest">
+          <a class="quest__back-link back-link" href="quests.html">все квесты</a>
           <span class="quest__breadcrumb breadcrumb">хоррор, триллер</span>
           <h1 class="quest__title">
             Маньяк

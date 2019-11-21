@@ -34,36 +34,73 @@
   .main-nav__toggle {
     z-index: 2;
     position: absolute;
-    overflow-x: hidden;
+    // overflow-x: hidden;
     top: 33px;
     right: 16px;
     display: block;
-    width: 20px;
+    width: 80px;
     height: 18px;
     border: none;
     background-color: transparent;
     cursor: pointer;
   }
 
+  .main-nav__menu-title {
+    position: absolute;
+    top: 0;
+    right: 28px;
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    color: #f0f0f0;
+  }
+
   .main-nav--closed {
     background: none;
   }
+
+  // .main-nav--closed .main-nav__toggle::before {
+  //   content: "";
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 20px;
+  //   height: 2px;
+  //   background-color: #ffffff;
+  //   box-shadow: -4px 7px 0 0 #ffffff, 0 14px 0 0 #ffffff;
+  // }
 
   .main-nav--closed .main-nav__toggle::before {
     content: "";
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
     width: 20px;
     height: 2px;
     background-color: #ffffff;
-    box-shadow: -4px 7px 0 0 #ffffff, 0 14px 0 0 #ffffff;
+    box-shadow: 0 14px 0 0 #ffffff;
+  }
+
+  .main-nav--closed .main-nav__toggle::after {
+    content: "";
+    position: absolute;
+    top: 7px;
+    right: 4px;
+    width: 16px;
+    height: 2px;
+    background-color: #ffffff;
+  }
+
+  .main-nav--opened .main-nav__menu-title {
+    top: 2px;
   }
 
   .main-nav--opened .main-nav__toggle {
     top: 31px;
     right: 16px;
-    width: 18px;
+    width: 80px;
     height: 18px;
 
     &::before,
@@ -71,7 +108,7 @@
       content: "";
       position: absolute;
       top: 8px;
-      left: 0;
+      right: 0;
       width: 20px;
       height: 2px;
       background-color: #ffffff;
@@ -105,17 +142,5 @@
 
   .main-nav--nojs .menu__item {
     display: block;
-  }
-
-  .main-nav__menu-title {
-    position: absolute;
-    top: 33px;
-    right: 44px;
-    display: block;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.03em;
-    color: #f0f0f0;
   }
 }

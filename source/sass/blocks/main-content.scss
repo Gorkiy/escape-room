@@ -1,0 +1,21 @@
+.main-content {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  height: auto;
+  width: 100%;
+  display: flex;
+  align-content: center;
+}
+
+.main-content--centered {
+  top: 0;
+  align-items: center;
+  height: 100%;
+}
+
+@media (max-width: $mobile-width) {
+  .main-content {
+    position: static;
+  }
+}

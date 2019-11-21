@@ -1,13 +1,9 @@
 .main-program {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin: 0 auto;
   width: 80%;
 }
 
 .main-program__title {
-  // margin-top: 10px;
   margin-bottom: 30px;
   width: 48%;
 }
@@ -50,8 +46,11 @@
 
 @media (max-width: $mobile-width) {
   .main-program {
+    position: absolute;
+    left: 0;
+    bottom: 65px;
+    width: 100%;
     text-align: center;
-    transform: translate(-50%, 50%);
   }
 
   .main-program__title {
