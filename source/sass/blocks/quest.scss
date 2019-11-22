@@ -1,5 +1,5 @@
 .quest {
-  margin-top: -30px;
+  // margin-top: -30px;
   width: 56%;
   margin-left: auto;
 }
@@ -115,7 +115,7 @@
   }
 
   .quest__title {
-    margin-bottom: 45px;
+    margin-bottom: 51px;
   }
 
   .quest__description {
@@ -133,12 +133,13 @@
   }
 
   .quest__info--item {
+    padding: 0;
     min-width: 33%;
     text-align: center;
-    padding: 0;
+    line-height: 120%;
 
     &::after {
-      top: -25px;
+      top: -32px;
       height: 48px;
     }
   }
@@ -148,7 +149,7 @@
 
     &::before {
       position: absolute;
-      top: -27px;
+      top: -30px;
       left: 50%;
       transform: translateX(-50%);
     }
@@ -159,8 +160,10 @@
 
     &::before {
       position: absolute;
-      top: -27px;
+      top: -32px;
       left: 50%;
+      width: 18px;
+      height: 23px;
       transform: translateX(-50%);
     }
   }
@@ -170,8 +173,10 @@
 
     &::before {
       position: absolute;
-      top: -27px;
+      top: -32px;
       left: 50%;
+      width: 23px;
+      height: 23px;
       transform: translateX(-50%);
     }
   }

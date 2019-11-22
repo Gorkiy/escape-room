@@ -13,7 +13,7 @@
     <div style="display: none">
       <include src="build/img/sprite_auto.svg"></include>
     </div>
-    <div class="page-container">
+    <div class="page-container page-container--single">
       <header class="page-header page-header--transparent">
         <div class="page-header__logo-wrap">
           <a class="page-header__logo" href="index.html">
@@ -74,8 +74,9 @@
         <section class="page-quest__single quest">
           <a class="quest__back-link back-link" href="quests.html">все квесты</a>
           <span class="quest__breadcrumb breadcrumb">хоррор, триллер</span>
-          <h1 class="quest__title title--quest">
+          <h1 class="quest__title title title--quest">
             Маньяк
+            <!-- Тайны старого особняка -->
           </h1>
           <div class="quest-wrap">
             <div class="quest__info">
@@ -98,7 +99,7 @@
       <include src="build/components/modals.html"></include>
       <!-- background -->
       <div class="page-container__bg page-container__bg--quest">
-        <picture>
+        <picture class="page-container__bg-box">
           <source type="image/jpeg" media="(min-width: 768px)"
             srcset="img/bg_q-maniac.jpg 1x, img/bg_q-maniac@2x.jpg 2x">
           <img class="page-container__bg-image" src="img/bg_q-maniac-mobile.jpg"

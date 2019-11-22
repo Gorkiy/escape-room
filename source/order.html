@@ -14,7 +14,7 @@
       <include src="build/img/sprite_auto.svg"></include>
     </div>
     <div class="page-container">
-      <header class="page-header">
+      <header class="page-header page-header--transparent">
         <div class="page-header__logo-wrap">
           <a class="page-header__logo" href="index.html">
             <img class="page-header__logo-image" src="img/logo.svg" width="85" height="34" alt="Escape Room">
@@ -78,22 +78,22 @@
             <h1 class="visually-hidden">
               Квест в Новосибирске по тематике
             </h1>
-            <h2 class="order__title title title--quest">
+            <p class="order__title title title--quest">
               Маньяк
               <!-- Хищина в старом лесу -->
               <!-- Таинственный лес -->
-            </h2>
+            </p>
           </div>
           <div class="order__selected-options">
-            <span>Вы выбрали игру 22 марта в 16:00.</span>
-            <span>К оплате 1500 рублей.</span>
+            <p class="order__selected-info">Вы выбрали игру 22 марта в 16:00.</p>
+            <p class="order__selected-info">К оплате 1500 рублей.</p>
           </div>
           <div class="order__pay-wrap">
-            <a class="order__pay simple-button" href="#">Перейти к оплате</a>
+            <button class="order__pay simple-button" type="submit" form="quest-form">Перейти к оплате</button>
           </div>
           <div class="order__booking-wrap">
             <div class="order__date-wrap">
-              <a class="order__select-date simple-button" href="#">Выберите дату</a>
+              <button type="button" class="order__select-date simple-button">Выберите дату</button>
               <span class="order__date" href="#">22 марта</a>
             </div>
             <ul class="order__legend legend">
@@ -102,72 +102,94 @@
               <li class="legend__item legend__item--selected">— выбрано вами</li>
             </ul>
           </div>
-          <ul class="order__time-picker time-picker">
-            <li class="time-picker__option">
-              <input class="time-picker__time visually-hidden" type="radio" name="time" id="945">
-              <label class="time-picker__label" for="945">9:45</label>
-              <span class="time-picker__price">1400 ₽</span>
-            </li>
-            <li class="time-picker__option">
-              <input class="time-picker__time visually-hidden" type="radio" name="time" id="1100">
-              <label class="time-picker__label" for="1100">11:00</label>
-              <span class="time-picker__price">1400 ₽</span>
-            </li>
-            <li class="time-picker__option">
-              <input class="time-picker__time visually-hidden" type="radio" name="time" id="1215" disabled>
-              <label class="time-picker__label" for="1215">12:15</label>
-              <span class="time-picker__price">1400 ₽</span>
-            </li>
-            <li class="time-picker__option">
-              <input class="time-picker__time visually-hidden" type="radio" name="time" id="1330" disabled>
-              <label class="time-picker__label" for="1330">13:30</label>
-              <span class="time-picker__price">1400 ₽</span>
-            </li>
-            <li class="time-picker__option">
-              <input class="time-picker__time visually-hidden" type="radio" name="time" id="1445">
-              <label class="time-picker__label" for="1445">14:45</label>
-              <span class="time-picker__price">1400 ₽</span>
-            </li>
-            <li class="time-picker__option">
-              <input class="time-picker__time visually-hidden" type="radio" name="time" id="1600" checked>
-              <label class="time-picker__label" for="1600">16:00</label>
-              <span class="time-picker__price">1500 ₽</span>
-            </li>
-            <li class="time-picker__option">
-              <input class="time-picker__time visually-hidden" type="radio" name="time" id="1715" disabled>
-              <label class="time-picker__label" for="1715">17:15</label>
-              <span class="time-picker__price">1500 ₽</span>
-            </li>
-            <li class="time-picker__option">
-              <input class="time-picker__time visually-hidden" type="radio" name="time" id="1830">
-              <label class="time-picker__label" for="1830">18:30</label>
-              <span class="time-picker__price">1500 ₽</span>
-            </li>
-            <li class="time-picker__option">
-              <input class="time-picker__time visually-hidden" type="radio" name="time" id="1945">
-              <label class="time-picker__label" for="1945">19:45</label>
-              <span class="time-picker__price">1500 ₽</span>
-            </li>
-            <li class="time-picker__option">
-              <input class="time-picker__time visually-hidden" type="radio" name="time" id="2100">
-              <label class="time-picker__label" for="2100">21:00</label>
-              <span class="time-picker__price">1800 ₽</span>
-            </li>
-            <li class="time-picker__option">
-              <input class="time-picker__time visually-hidden" type="radio" name="time" id="2215" disabled>
-              <label class="time-picker__label" for="2215">22:15</label>
-              <span class="time-picker__price">1800 ₽</span>
-            </li>
-            <li class="time-picker__option">
-              <input class="time-picker__time visually-hidden" type="radio" name="time" id="2330" disabled>
-              <label class="time-picker__label" for="2330">23:30</label>
-              <span class="time-picker__price">2000 ₽</span>
-            </li>
-          </ul>
+          <form class="order__form" id="quest-form" method="get" action="https://echo.htmlacademy.ru">
+            <ul class="order__time-picker time-picker">
+              <li class="time-picker__option">
+                <input class="time-picker__time visually-hidden" type="radio" name="time" id="945" value="945" required>
+                <label class="time-picker__label" for="945">9:45</label>
+                <span class="time-picker__price">1400 ₽</span>
+              </li>
+              <li class="time-picker__option">
+                <input class="time-picker__time visually-hidden" type="radio" name="time" id="1100" value="1100"
+                  required>
+                <label class="time-picker__label" for="1100">11:00</label>
+                <span class="time-picker__price">1400 ₽</span>
+              </li>
+              <li class="time-picker__option">
+                <input class="time-picker__time visually-hidden" type="radio" name="time" id="1215" value="1215"
+                  disabled>
+                <label class="time-picker__label" for="1215">12:15</label>
+                <span class="time-picker__price">1400 ₽</span>
+              </li>
+              <li class="time-picker__option">
+                <input class="time-picker__time visually-hidden" type="radio" name="time" id="1330" value="1330"
+                  disabled>
+                <label class="time-picker__label" for="1330">13:30</label>
+                <span class="time-picker__price">1400 ₽</span>
+              </li>
+              <li class="time-picker__option">
+                <input class="time-picker__time visually-hidden" type="radio" name="time" id="1445" value="1445"
+                  required>
+                <label class="time-picker__label" for="1445">14:45</label>
+                <span class="time-picker__price">1400 ₽</span>
+              </li>
+              <li class="time-picker__option">
+                <input class="time-picker__time visually-hidden" type="radio" name="time" id="1600" value="1600"
+                  required>
+                <label class="time-picker__label" for="1600">16:00</label>
+                <span class="time-picker__price">1500 ₽</span>
+              </li>
+              <li class="time-picker__option">
+                <input class="time-picker__time visually-hidden" type="radio" name="time" id="1715" value="1715"
+                  disabled>
+                <label class="time-picker__label" for="1715">17:15</label>
+                <span class="time-picker__price">1500 ₽</span>
+              </li>
+              <li class="time-picker__option">
+                <input class="time-picker__time visually-hidden" type="radio" name="time" id="1830" value="1830"
+                  required>
+                <label class="time-picker__label" for="1830">18:30</label>
+                <span class="time-picker__price">1500 ₽</span>
+              </li>
+              <li class="time-picker__option">
+                <input class="time-picker__time visually-hidden" type="radio" name="time" id="1945" value="1945"
+                  required>
+                <label class="time-picker__label" for="1945">19:45</label>
+                <span class="time-picker__price">1500 ₽</span>
+              </li>
+              <li class="time-picker__option">
+                <input class="time-picker__time visually-hidden" type="radio" name="time" id="2100" value="2100"
+                  required>
+                <label class="time-picker__label" for="2100">21:00</label>
+                <span class="time-picker__price">1800 ₽</span>
+              </li>
+              <li class="time-picker__option">
+                <input class="time-picker__time visually-hidden" type="radio" name="time" id="2215" value="2215"
+                  disabled>
+                <label class="time-picker__label" for="2215">22:15</label>
+                <span class="time-picker__price">1800 ₽</span>
+              </li>
+              <li class="time-picker__option">
+                <input class="time-picker__time visually-hidden" type="radio" name="time" id="2330" value="2330"
+                  disabled>
+                <label class="time-picker__label" for="2330">23:30</label>
+                <span class="time-picker__price">2000 ₽</span>
+              </li>
+            </ul>
+          </form>
         </section>
       </main>
       <!-- Modals -->
       <include src="build/components/modals.html"></include>
+      <!-- background -->
+      <div class="page-container__bg page-container__bg--blur">
+        <picture class="page-container__bg-box">
+          <source type="image/jpeg" media="(min-width: 768px)"
+            srcset="img/bg_q-maniac.jpg 1x, img/bg_q-maniac@2x.jpg 2x">
+          <img class="page-container__bg-image" src="img/bg_q-maniac-mobile.jpg"
+            srcset="img/bg_q-maniac-mobile@2x.jpg 2x" alt="">
+        </picture>
+      </div>
     </div>
     <script src="js/script.js"></script>
   </body>

@@ -81,10 +81,15 @@
 
 @media (max-width: $tablet-width) {
   .page-header {
+    position: absolute;
     padding-left: 16px;
     padding-right: 16px;
     flex-direction: column;
     align-items: stretch;
+  }
+
+  .page-header--fixed {
+    position: fixed;
   }
 
   .page-header--open {

@@ -6,6 +6,12 @@
   flex-wrap: wrap;
 }
 
+.order__form {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
 .order__booking-wrap {
   position: relative;
   margin-top: 12px;
@@ -23,13 +29,10 @@
   }
 }
 
-.quest__select-date {
-  margin-top: 20px;
-}
-
 .order__title-wrap {
-  flex-grow: 1;
-  max-width: 60%;
+  // flex-grow: 1;
+  max-width: 50%;
+  margin-right: 80px;
 }
 
 .order__selected-options {
@@ -38,6 +41,10 @@
   flex-direction: column;
   justify-content: flex-end;
   margin-bottom: 38px;
+}
+
+.order__selected-info {
+  margin: 0;
 }
 
 .order__pay-wrap {
@@ -54,7 +61,7 @@
 }
 
 .order__date {
-  margin-left: 30px;
+  margin-left: 37px;
   font-weight: 800;
   font-size: 28px;
   line-height: 144%;
@@ -73,7 +80,8 @@
 
   .order__title-wrap {
     flex-grow: 1;
-    max-width: 50%;
+    max-width: 40%;
+    margin-right: 40px;
   }
 }
 
@@ -98,6 +106,7 @@
   .order__title-wrap {
     order: 1;
     max-width: 100%;
+    margin-right: 0;
   }
 
   .order__booking-wrap {
@@ -110,17 +119,18 @@
     }
   }
 
+  .order__form {
+    order: 3;
+  }
+
   .order__selected-options {
     order: 4;
     max-width: 100%;
+    width: 100%;
   }
 
   .order__pay-wrap {
     order: 5;
     text-align: left;
-  }
-
-  .order__time-picker {
-    order: 3;
   }
 }
