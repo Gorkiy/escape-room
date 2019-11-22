@@ -5,17 +5,14 @@ var navToggle = document.querySelector('.main-nav__toggle');
 var askFormButton = document.querySelector('.ask-form__button');
 var askLink = document.querySelector('.page-footer__ask-link');
 var locationLink = document.querySelector('.page-header__location');
+var pageHeader = document.querySelector('.page-header');
 
 // Поведение навигации
 navMain.classList.remove('main-nav--nojs');
 navToggle.addEventListener('click', function () {
-  if (navMain.classList.contains('main-nav--closed')) {
-    navMain.classList.remove('main-nav--closed');
-    navMain.classList.add('main-nav--opened');
-  } else {
-    navMain.classList.add('main-nav--closed');
-    navMain.classList.remove('main-nav--opened');
-  }
+  navMain.classList.toggle('main-nav--closed');
+  navMain.classList.toggle('main-nav--opened');
+  pageHeader.classList.toggle('page-header--fixed');
 });
 
 // Валидация формы
