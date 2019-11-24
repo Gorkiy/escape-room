@@ -50,7 +50,7 @@
               </svg>
               <a class="page-header__city-link" href="#">Новосибирск</a>
             </div>
-            <span class="page-header__phone">8 (383) 284 01 60</span>
+            <a class="page-header__phone" href="tel:+73832840160">8 (383) 284 01 60</a>
           </div>
           <footer class="page-footer">
             <ul class="page-footer__social social">
@@ -145,7 +145,6 @@
               </li>
             </ul>
           </div>
-
           <ul class="quest-select__quests quests">
             <li class="quests__item">
               <a class="quests__item-link" href="#">
@@ -158,9 +157,10 @@
                     <span class="quests__difficulty">cложный</span>
                   </div>
                 </div>
-                <div class="quests__image-box">
+                <picture class="quests__image-box">
+                  <source type="image/webp" srcset="img/q_select-tomb.webp 1x, img/q_select-tomb@2x.webp 2x">
                   <img class="quests__bg-image" src="img/q_select-tomb.jpg" srcset="img/q_select-tomb@2x.jpg 2x" alt="Квест склеп">
-                </div>
+                </picture>
               </a>
             </li>
             <li class="quests__item">
@@ -174,13 +174,14 @@
                     <span class="quests__difficulty">средний</span>
                   </div>
                 </div>
-                <div class="quests__image-box">
+                <picture class="quests__image-box">
+                  <source type="image/webp" srcset="img/q_select-maniac.webp 1x, img/q_select-maniac@2x.webp 2x">
                   <img class="quests__bg-image" src="img/q_select-maniac.jpg" srcset="img/q_select-maniac@2x.jpg 2x" alt="Квест маньяк">
-                </div>
+                </picture>
               </a>
             </li>
             <li class="quests__item">
-              <a class="quests__item-link" href="#">
+              <a class="quests__item-link" href="ritual.html">
                 <div class="quests__info">
                   <h3 class="quests__name">Ритуал</h3>
                   <span class="quests__address">пр. Ленина, 37</span>
@@ -189,9 +190,12 @@
                     <span class="quests__difficulty">сложный</span>
                   </div>
                 </div>
-                <div class="quests__image-box">
+                <picture class="quests__image-box">
+                  <source type="image/webp" srcset="img/q_select-ritual.webp 1x, img/q_select-ritual@2x.webp 2x">
+                  <!-- 1х: 464px; 2x: 688px -->
+                  <!-- Все картинки одной ширины -->
                   <img class="quests__bg-image" src="img/q_select-ritual.jpg" srcset="img/q_select-ritual@2x.jpg 2x" alt="Квест ритуал">
-                </div>
+                </picture>
               </a>
             </li>
             <li class="quests__item">
@@ -204,13 +208,14 @@
                     <span class="quests__difficulty">легкий</span>
                   </div>
                 </div>
-                <div class="quests__image-box">
+                <picture class="quests__image-box">
+                  <source type="image/webp" srcset="img/q_select-ghost.webp 1x, img/q_select-ghost@2x.webp 2x">
                   <img class="quests__bg-image" src="img/q_select-ghost.jpg" srcset="img/q_select-ghost@2x.jpg 2x" alt="Квест История призраков">
-                </div>
+                </picture>
               </a>
             </li>
             <li class="quests__item">
-              <a class="quests__item-link" href="#">
+              <a class="quests__item-link" href="mystery.html">
                 <div class="quests__info">
                   <h3 class="quests__name">Тайны старого особняка</h3>
                   <span class="quests__address">пр. Ленина, 27</span>
@@ -219,9 +224,10 @@
                     <span class="quests__difficulty">легкий</span>
                   </div>
                 </div>
-                <div class="quests__image-box">
+                <picture class="quests__image-box">
+                  <source type="image/webp" srcset="img/q_select-mystery.webp 1x, img/q_select-mystery@2x.webp 2x">
                   <img class="quests__bg-image" src="img/q_select-mystery.jpg" srcset="img/q_select-mystery@2x.jpg 2x" alt="Квест Тайны старого особняка">
-                </div>
+                </picture>
               </a>
             </li>
             <li class="quests__item">
@@ -235,13 +241,14 @@
                     <span class="quests__difficulty">средний</span>
                   </div>
                 </div>
-                <div class="quests__image-box">
+                <picture class="quests__image-box">
+                  <source type="image/webp" srcset="img/q_select-hut.webp 1x, img/q_select-hut@2x.webp 2x">
                   <img class="quests__bg-image" src="img/q_select-hut.jpg" srcset="img/q_select-hut@2x.jpg 2x" alt="Квест Хижина в лесу">
-                </div>
+                </picture>
               </a>
             </li>
             <li class="quests__item">
-              <a class="quests__item-link" href="#">
+              <a class="quests__item-link" href="trial.html">
                 <div class="quests__info">
                   <h3 class="quests__name">Фатальный эксперимент</h3>
                   <span class="quests__address">Верхнетецкая, 32</span>
@@ -250,9 +257,10 @@
                     <span class="quests__difficulty">сложный</span>
                   </div>
                 </div>
-                <div class="quests__image-box">
+                <picture class="quests__image-box">
+                  <source type="image/webp" srcset="img/q_select-trial.webp 1x, img/q_select-trial@2x.webp 2x">
                   <img class="quests__bg-image" src="img/q_select-trial.jpg" srcset="img/q_select-trial@2x.jpg 2x" alt="Квест Фатальный эксперимент">
-                </div>
+                </picture>
               </a>
             </li>
             <li class="quests__item">
@@ -265,9 +273,10 @@
                     <span class="quests__difficulty">средний</span>
                   </div>
                 </div>
-                <div class="quests__image-box">
+                <picture class="quests__image-box">
+                  <source type="image/webp" srcset="img/q_select-metro.webp 1x, img/q_select-metro@2x.webp 2x">
                   <img class="quests__bg-image" src="img/q_select-metro.jpg" srcset="img/q_select-metro@2x.jpg 2x" alt="Квест Метро 2033">
-                </div>
+                </picture>
               </a>
             </li>
             <li class="quests__item">
@@ -280,9 +289,10 @@
                     <span class="quests__difficulty">легкий</span>
                   </div>
                 </div>
-                <div class="quests__image-box">
+                <picture class="quests__image-box">
+                  <source type="image/webp" srcset="img/q_select-attic.webp 1x, img/q_select-attic@2x.webp 2x">
                   <img class="quests__bg-image" src="img/q_select-attic.jpg" srcset="img/q_select-attic@2x.jpg 2x" alt="Квест Старый чердак">
-                </div>
+                </picture>
               </a>
             </li>
             <li class="quests__item">
@@ -295,9 +305,10 @@
                     <span class="quests__difficulty">средний</span>
                   </div>
                 </div>
-                <div class="quests__image-box">
+                <picture class="quests__image-box">
+                  <source type="image/webp" srcset="img/q_select-front.webp 1x, img/q_select-front@2x.webp 2x">
                   <img class="quests__bg-image" src="img/q_select-front.jpg" srcset="img/q_select-front@2x.jpg 2x" alt="Квест Последний рубеж">
-                </div>
+                </picture>
               </a>
             </li>
             <li class="quests__item">
@@ -310,10 +321,11 @@
                     <span class="quests__difficulty">легкий</span>
                   </div>
                 </div>
-                <div class="quests__image-box">
+                <picture class="quests__image-box">
+                  <source type="image/webp" srcset="img/q_select-mars.webp 1x, img/q_select-mars@2x.webp 2x">
                   <img class="quests__bg-image" src="img/q_select-mars.jpg" srcset="img/q_select-mars@2x.jpg 2x" alt="Квест Марс–2056">
-                </div>
-              </a>
+                  <p></p>
+              </picture></a>
             </li>
           </ul>
         </section>
