@@ -5,7 +5,7 @@
   "homepage": "https://gorkiy.github.io/escape-room",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
-    "autoprefixer": "9.5.x",
+    "autoprefixer": "^9.7.2",
     "browser-sync": "2.26.x",
     "eslint": "^6.6.0",
     "eslint-config-htmlacademy": "0.4.x",
@@ -29,7 +29,7 @@
   "scripts": {
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
-    "test": "npm run editorconfig && npm run stylelint && eslint source/js/",
+    "test": "npm run editorconfig && npm run stylelint && eslint source/js/main.js",
     "build": "gulp build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",

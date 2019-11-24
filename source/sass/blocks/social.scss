@@ -1,6 +1,6 @@
 .social {
-  display: flex;
   @include list-reset();
+  display: flex;
 }
 
 .social__item {

@@ -21,6 +21,5 @@
 .city-list__link--active {
   opacity: 1;
   text-decoration: underline;
-  -webkit-text-decoration-color: $accent-color;
-          text-decoration-color: $accent-color;
+  text-decoration-color: $accent-color;
 }

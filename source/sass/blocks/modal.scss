@@ -105,7 +105,7 @@
 
 @media (max-width: $mobile-width) {
   .modal {
-    background: linear-gradient(0deg, #141414 0%, #1F1D1D 100%);
+    background: linear-gradient(0deg, #141414 0%, #1f1d1d 100%);
   }
 
   .modal__content {
@@ -115,12 +115,10 @@
   }
 
   .modal__heading {
-    margin-top: 16px
-    ;
+    margin-top: 16px;
   }
 
   .modal__close-button {
     right: 16px;
   }
-
 }

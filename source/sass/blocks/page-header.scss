@@ -79,6 +79,12 @@
   color: #f0f0f0;
 }
 
+@media (max-width: 1100px) {
+  .page-header__logo-wrap {
+    width: auto;
+  }
+}
+
 @media (max-width: $tablet-width) {
   .page-header {
     position: absolute;

@@ -22,13 +22,22 @@ function checkFormState() {
   var inputs = form.querySelectorAll('input');
   var isReady = true;
 
-  for (let input of inputs) {
-    if (input.type === 'checkbox' && !input.checked) isReady = false;
-    if (!input.value) isReady = false;
-    if (input.id === 'email' && input.validity.typeMismatch) isReady = false;
+  for (var i = 0; i < inputs.length; i++) {
+    var input = inputs[i];
+
+    if (input.type === 'checkbox' && !input.checked) {
+      isReady = false;
+    }
+    if (!input.value) {
+      isReady = false;
+    }
+    if (input.id === 'email' && input.validity.typeMismatch) {
+      isReady = false;
+    }
   }
+
   return isReady;
-};
+}
 
 form.addEventListener('input', function (evt) {
   // Поведение кнопки отправки формы
@@ -71,9 +80,9 @@ form.addEventListener('submit', function (evt) {
   var question = document.getElementById('question').value;
 
   var userQuestion = {
-    name,
-    email,
-    question
+    name: name,
+    email: email,
+    question: question
   };
   localStorage.setItem('userQuestion', JSON.stringify(userQuestion));
 });
@@ -102,12 +111,12 @@ form.addEventListener('focusout', function (evt) {
 var askModal = document.querySelector('.modal--ask');
 var cityModal = document.querySelector('.modal--city');
 
-askLink.addEventListener('click', function (evt) {
+askLink.addEventListener('click', function () {
   askModal.classList.add('modal--show');
-  var inputName = document.getElementById('name').focus();
+  document.getElementById('name').focus();
 });
 
-locationLink.addEventListener('click', function (evt) {
+locationLink.addEventListener('click', function () {
   cityModal.classList.add('modal--show');
 });
 
@@ -115,16 +124,24 @@ askModal.addEventListener('click', function (evt) {
   var formBox = evt.target.closest('.modal-ask');
   var closeButton = evt.target.closest('.modal__close-button');
 
-  if (!formBox) askModal.classList.remove('modal--show');
-  if (closeButton) askModal.classList.remove('modal--show');
+  if (!formBox) {
+    askModal.classList.remove('modal--show');
+  }
+  if (closeButton) {
+    askModal.classList.remove('modal--show');
+  }
 });
 
 cityModal.addEventListener('click', function (evt) {
   var formBox = evt.target.closest('.modal-city');
   var closeButton = evt.target.closest('.modal__close-button');
 
-  if (!formBox) cityModal.classList.remove('modal--show');
-  if (closeButton) cityModal.classList.remove('modal--show');
+  if (!formBox) {
+    cityModal.classList.remove('modal--show');
+  }
+  if (closeButton) {
+    cityModal.classList.remove('modal--show');
+  }
 });
 
 document.addEventListener('keydown', function (evt) {
@@ -134,18 +151,19 @@ document.addEventListener('keydown', function (evt) {
   }
 });
 
-/*! picturefill - v3.0.2 - 2016-02-12
+/* ! picturefill - v3.0.2 - 2016-02-12
  * https://scottjehl.github.io/picturefill/
  * Copyright (c) 2016 https://github.com/scottjehl/picturefill/blob/master/Authors.txt; Licensed MIT
  */
-/*! Gecko-Picture - v1.0
+/* ! Gecko-Picture - v1.0
  * https://github.com/scottjehl/picturefill/tree/3.0/src/plugins/gecko-picture
  * Firefox's early picture implementation (prior to FF41) is static and does
  * not react to viewport changes. This tiny module fixes this.
  */
+'use strict';
 
 (function (window) {
-  /*jshint eqnull:true */
+  /* jshint eqnull:true */
   var ua = navigator.userAgent;
 
   if (window.HTMLPictureElement && ((/ecko/).test(ua) && ua.match(/rv\:(\d+)/) && RegExp.$1 < 45)) {
@@ -155,7 +173,8 @@ document.addEventListener('keydown', function (evt) {
       var dummySrc = document.createElement('source');
 
       var fixRespimg = function (img) {
-        var source, sizes;
+        var source;
+        var sizes;
         var picture = img.parentNode;
 
         if (picture.nodeName.toUpperCase() === 'PICTURE') {
@@ -208,7 +227,7 @@ document.addEventListener('keydown', function (evt) {
   }
 })(window);
 
-/*! Picturefill - v3.0.2
+/* ! Picturefill - v3.0.2
 * http://scottjehl.github.io/picturefill
 * Copyright (c) 2015 https://github.com/scottjehl/picturefill/blob/master/Authors.txt;
 *  License: MIT
@@ -216,12 +235,15 @@ document.addEventListener('keydown', function (evt) {
 
 (function (window, document, undefined) {
   // Enable strict mode
-  'use strict';
+  // 'use strict';
 
   // HTML shim|v it for old IE (IE9 will still need the HTML video tag workaround)
   document.createElement('picture');
 
-  var warn, eminpx, alwaysCheckWDescriptor, evalId;
+  var warn;
+  var eminpx;
+  var alwaysCheckWDescriptor;
+  var evalId;
   // local object for method references and testing exposure
   var pf = {};
   var isSupportTestReady = false;
@@ -246,7 +268,7 @@ document.addEventListener('keydown', function (evt) {
   var regWDesc = /\s+\+?\d+(e\d+)?w/;
   var regSize = /(\([^)]+\))?\s*(.+)/;
   var setOptions = window.picturefillCFG;
-  /**
+  /* *
    * Shortcut property for https://w3c.github.io/webappsec/specs/mixedcontent/#restricts-mixed-content ( for easy overriding in tests )
    */
   // baseStyle also used by getEmValue (i.e.: width: 1em is important)
@@ -262,7 +284,7 @@ document.addEventListener('keydown', function (evt) {
     'in': 96
   };
   var anchor = document.createElement('a');
-  /**
+  /* *
    * alreadyRun flag used for setOptions. is it true setOptions will reevaluate
    * @type {boolean}
    */
@@ -292,7 +314,7 @@ document.addEventListener('keydown', function (evt) {
     }
   };
 
-  /**
+  /* *
    * simple memoize function:
    */
 
@@ -318,7 +340,7 @@ document.addEventListener('keydown', function (evt) {
       c === '\u000D');  // carriage return
   }
 
-  /**
+  /* *
    * gets a mediaquery and returns a boolean or gets a css length and returns a number
    * @param css mediaqueries or css length
    * @returns {boolean|number}
@@ -351,7 +373,7 @@ document.addEventListener('keydown', function (evt) {
         // interpret `max-` as <=
         /max-([a-z-\s]+):/g, 'e.$1<=',
 
-        //calc value
+        // calc value
         /calc([^)]+)/g, '($1)',
 
         // interpret css values
@@ -368,11 +390,11 @@ document.addEventListener('keydown', function (evt) {
         if (length && (parsedLength = css.match(regLength))) {
           cssCache[css] = parsedLength[1] * units[parsedLength[2]];
         } else {
-          /*jshint evil:true */
+          /* jshint evil:true */
           try {
             cssCache[css] = new Function('e', buildStr(css))(units);
           } catch (e) { }
-          /*jshint evil:false */
+          /* jshint evil:false */
         }
       }
       return cssCache[css];
@@ -389,7 +411,7 @@ document.addEventListener('keydown', function (evt) {
     return candidate;
   };
 
-  /**
+  /* *
    *
    * @param opt
    */
@@ -426,7 +448,7 @@ document.addEventListener('keydown', function (evt) {
     }
   };
 
-  /**
+  /* *
    * outputs a warning for the developer
    * @param {message}
    * @type {Function}
@@ -466,7 +488,7 @@ document.addEventListener('keydown', function (evt) {
   // test svg support
   types['image/svg+xml'] = document.implementation.hasFeature('http://www.w3.org/TR/SVG11/feature#Image', '1.1');
 
-  /**
+  /* *
    * updates the internal vW property with the current viewport width in px
    */
   function updateMetrics() {
@@ -597,7 +619,7 @@ document.addEventListener('keydown', function (evt) {
     }
   }
 
-  /**
+  /* *
    * Srcset Parser
    * By Alex Bell |  MIT License
    *
@@ -638,7 +660,7 @@ document.addEventListener('keydown', function (evt) {
       // 3. Let candidates be an initially empty source set.
       candidates = [];
 
-    /**
+    /* *
     * Adds descriptor properties to a candidate, pushes to the candidates array
     * @return undefined
     */
@@ -725,7 +747,7 @@ document.addEventListener('keydown', function (evt) {
       }
     } // (close parseDescriptors fn)
 
-    /**
+    /* *
     * Tokenizes descriptor properties prior to parsing
     * Returns undefined.
     * (Again, this fn is defined before it is used, in order to pass JSHINT.
@@ -1152,7 +1174,7 @@ document.addEventListener('keydown', function (evt) {
   pf.sel = pf.selShort;
   pf.cfg = cfg;
 
-  /**
+  /* *
    * Shortcut property for `devicePixelRatio` ( for easy overriding in tests )
    */
   pf.DPR = (DPR || 1);
@@ -1163,7 +1185,7 @@ document.addEventListener('keydown', function (evt) {
 
   pf.setSize = noop;
 
-  /**
+  /* *
    * Gets a string and returns the absolute URL
    * @param src
    * @returns {String} absolute URL
@@ -1174,7 +1196,7 @@ document.addEventListener('keydown', function (evt) {
     return anchor.href;
   });
 
-  /**
+  /* *
    * Gets a DOM element or document and a selctor and returns the found matches
    * Can be extended with jQuery/Sizzle for IE7 support
    * @param context
@@ -1185,7 +1207,7 @@ document.addEventListener('keydown', function (evt) {
     return ('querySelector' in context) ? context.querySelectorAll(sel) : [];
   };
 
-  /**
+  /* *
    * Shortcut method for matchMedia ( for easy overriding in tests )
    * wether native or pf.mMQ is used will be decided lazy on first call
    * @returns {boolean}
@@ -1202,7 +1224,7 @@ document.addEventListener('keydown', function (evt) {
     return pf.matchesMedia.apply(this, arguments);
   };
 
-  /**
+  /* *
    * A simplified matchMedia implementation for IE8 and IE9
    * handles only min-width/max-width with px or em values
    * @param media
@@ -1212,7 +1234,7 @@ document.addEventListener('keydown', function (evt) {
     return media ? evalCSS(media) : true;
   };
 
-  /**
+  /* *
    * Returns the calculated length in css pixel from the given sourceSizeValue
    * http://dev.w3.org/csswg/css-values-3/#length-value
    * intended Spec mismatches:
@@ -1231,7 +1253,7 @@ document.addEventListener('keydown', function (evt) {
     return value;
   };
 
-  /**
+  /* *
    * Takes a type string and checks if its supported
    */
 
@@ -1239,7 +1261,7 @@ document.addEventListener('keydown', function (evt) {
     return (type) ? types[type] : true;
   };
 
-  /**
+  /* *
    * Parses a sourceSize into mediaCondition (media) and sourceSizeValue (length)
    * @param sourceSizeStr
    * @returns {*}
@@ -1259,7 +1281,7 @@ document.addEventListener('keydown', function (evt) {
     return set.cands;
   };
 
-  /**
+  /* *
    * returns 1em in css px for html/body default size
    * function taken from respondjs
    * @returns {*|number}
@@ -1293,7 +1315,7 @@ document.addEventListener('keydown', function (evt) {
     return eminpx || 16;
   };
 
-  /**
+  /* *
    * Takes a string of sizes and returns the width in pixels as a number
    */
   pf.calcListLength = function (sourceSizeListStr) {
@@ -1309,7 +1331,7 @@ document.addEventListener('keydown', function (evt) {
     return sizeLengthCache[sourceSizeListStr];
   };
 
-  /**
+  /* *
    * Takes a candidate object with a srcset property in the form of url/
    * ex. 'images/pic-medium.png 1x, images/pic-medium-2x.png 2x' or
    *     'images/pic-medium.png 400w, images/pic-medium-2x.png 800w' or

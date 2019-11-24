@@ -1,11 +1,8 @@
 .quests {
   @include list-reset();
   margin-top: 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .quests__item {
@@ -38,7 +35,6 @@
 .quests__bg-image {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
   object-fit: cover;
   border-radius: 3px;
 }
@@ -68,8 +64,7 @@
     height: 14px;
     background-image: url("../img/icon-star.svg");
     background-size: cover;
-    -webkit-filter: invert(50%) sepia(71%) saturate(1682%) hue-rotate(1deg) brightness(107%) contrast(70%);
-            filter: invert(50%) sepia(71%) saturate(1682%) hue-rotate(1deg) brightness(107%) contrast(70%);
+    filter: invert(50%) sepia(71%) saturate(1682%) hue-rotate(1deg) brightness(107%) contrast(90%);
   }
 }
 
@@ -78,13 +73,8 @@
   z-index: 1;
   position: absolute;
   bottom: 12%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .quests__name {
@@ -102,6 +92,10 @@
   color: $main-color;
 }
 
+.quests__details {
+  display: flex;
+}
+
 .quests__address {
   margin-bottom: 5px;
   padding-left: 20px;
@@ -116,8 +110,7 @@
     height: 14px;
     background-image: url("../img/icon-location-small.svg");
     background-size: cover;
-    -webkit-filter: invert(50%) sepia(71%) saturate(1682%) hue-rotate(1deg) brightness(107%) contrast(70%);
-            filter: invert(50%) sepia(71%) saturate(1682%) hue-rotate(1deg) brightness(107%) contrast(70%);
+    filter: invert(50%) sepia(71%) saturate(1682%) hue-rotate(1deg) brightness(107%) contrast(90%);
   }
 }
 
@@ -162,6 +155,7 @@
     &:nth-child(2n) {
       margin-right: 0;
     }
+
     &:nth-child(3n) {
       margin-right: auto;
     }
@@ -170,10 +164,7 @@
 
 @media (max-width: $mobile-width) {
   .quests {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
 
   .quests__item {

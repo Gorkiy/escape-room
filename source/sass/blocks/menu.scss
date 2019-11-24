@@ -2,8 +2,6 @@
   margin-left: 45px;
   display: flex;
   justify-content: center;
-  // flex-wrap: wrap;
-  // border: 1px solid red;
   flex-grow: 1;
 }
 
@@ -26,12 +24,13 @@
 
 .menu__item {
   margin-right: 45px;
-  // &:last-child {
-  //   margin-right: 0;
-  // }
 }
 
 @media (max-width: 1100px) {
+  .menu {
+    margin-left: 20px;
+  }
+
   .menu__item {
     margin-right: 20px;
   }

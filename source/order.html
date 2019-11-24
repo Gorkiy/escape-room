@@ -48,7 +48,7 @@
               </svg>
               <a class="page-header__city-link" href="#">Новосибирск</a>
             </div>
-            <span class="page-header__phone">8 (383) 284 01 60</span>
+            <a class="page-header__phone" href="tel:+73832840160">8 (383) 284 01 60</a>
           </div>
           <footer class="page-footer">
             <ul class="page-footer__social social">
@@ -85,7 +85,7 @@
             </p>
           </div>
           <div class="order__selected-options">
-            <p class="order__selected-info">Вы выбрали игру 22 марта в 16:00.</p>
+            <p class="order__selected-info">Вы выбрали игру 22&nbsp;марта в 16:00.</p>
             <p class="order__selected-info">К оплате 1500 рублей.</p>
           </div>
           <div class="order__pay-wrap">
@@ -184,9 +184,11 @@
       <!-- background -->
       <div class="page-container__bg page-container__bg--blur">
         <picture class="page-container__bg-box">
+          <!-- 1х: 1366px; 2x: 2732px -->
           <source type="image/jpeg" media="(min-width: 768px)"
             srcset="img/bg_q-maniac.jpg 1x, img/bg_q-maniac@2x.jpg 2x">
-          <img class="page-container__bg-image" src="img/bg_q-maniac-mobile.jpg"
+          <!-- 1х: 360px; 2x: 720px -->
+          <img class="page-container__bg-image page-container__bg-image--blur" src="img/bg_q-maniac-mobile.jpg"
             srcset="img/bg_q-maniac-mobile@2x.jpg 2x" alt="">
         </picture>
       </div>

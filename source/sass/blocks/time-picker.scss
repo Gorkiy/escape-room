@@ -19,7 +19,7 @@
   display: block;
   padding-top: 6px;
   padding-bottom: 6px;
-  border: 2px solid #C4C4C4;
+  border: 2px solid #c4c4c4;
   border-radius: 65px;
   font-weight: bold;
   font-size: 16px;
@@ -28,12 +28,12 @@
 }
 
 .time-picker__time:disabled + .time-picker__label {
-  background: linear-gradient(172.29deg, #F2890F 9.78%, #B8600F 79.81%);
+  background: linear-gradient(172.29deg, #f2890f 9.78%, #b8600f 79.81%);
   border: 2px solid transparent;
 }
 
 .time-picker__time:checked + .time-picker__label {
-  background: linear-gradient(180deg, #2CDB52 0%, #13BA19 100%);
+  background: linear-gradient(180deg, #2cdb52 0%, #13ba19 100%);
   border: 2px solid transparent;
 }
 

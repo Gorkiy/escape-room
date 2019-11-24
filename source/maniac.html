@@ -48,7 +48,7 @@
               </svg>
               <a class="page-header__city-link" href="#">Новосибирск</a>
             </div>
-            <span class="page-header__phone">8 (383) 284 01 60</span>
+            <a class="page-header__phone" href="tel:+73832840160">8 (383) 284 01 60</a>
           </div>
           <footer class="page-footer page-footer--main">
             <ul class="page-footer__social social">
@@ -100,8 +100,13 @@
       <!-- background -->
       <div class="page-container__bg page-container__bg--quest">
         <picture class="page-container__bg-box">
+          <source type="image/webp" media="(min-width: 768px)"
+            srcset="img/bg_q-maniac.webp 1x, img/bg_q-maniac@2x.webp 2x">
+          <source type="image/webp" srcset="img/bg_q-maniac-mobile.webp 1x, img/bg_q-maniac-mobile@2x.webp 2x">
+          <!-- 1х: 1366px; 2x: 2732px -->
           <source type="image/jpeg" media="(min-width: 768px)"
             srcset="img/bg_q-maniac.jpg 1x, img/bg_q-maniac@2x.jpg 2x">
+          <!-- 1х: 360px; 2x: 720px -->
           <img class="page-container__bg-image" src="img/bg_q-maniac-mobile.jpg"
             srcset="img/bg_q-maniac-mobile@2x.jpg 2x" alt="">
         </picture>

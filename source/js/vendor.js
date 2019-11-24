@@ -1,15 +1,16 @@
-/*! picturefill - v3.0.2 - 2016-02-12
+/* ! picturefill - v3.0.2 - 2016-02-12
  * https://scottjehl.github.io/picturefill/
  * Copyright (c) 2016 https://github.com/scottjehl/picturefill/blob/master/Authors.txt; Licensed MIT
  */
-/*! Gecko-Picture - v1.0
+/* ! Gecko-Picture - v1.0
  * https://github.com/scottjehl/picturefill/tree/3.0/src/plugins/gecko-picture
  * Firefox's early picture implementation (prior to FF41) is static and does
  * not react to viewport changes. This tiny module fixes this.
  */
+'use strict';
 
 (function (window) {
-  /*jshint eqnull:true */
+  /* jshint eqnull:true */
   var ua = navigator.userAgent;
 
   if (window.HTMLPictureElement && ((/ecko/).test(ua) && ua.match(/rv\:(\d+)/) && RegExp.$1 < 45)) {
@@ -19,7 +20,8 @@
       var dummySrc = document.createElement('source');
 
       var fixRespimg = function (img) {
-        var source, sizes;
+        var source;
+        var sizes;
         var picture = img.parentNode;
 
         if (picture.nodeName.toUpperCase() === 'PICTURE') {
@@ -72,7 +74,7 @@
   }
 })(window);
 
-/*! Picturefill - v3.0.2
+/* ! Picturefill - v3.0.2
 * http://scottjehl.github.io/picturefill
 * Copyright (c) 2015 https://github.com/scottjehl/picturefill/blob/master/Authors.txt;
 *  License: MIT
@@ -80,12 +82,15 @@
 
 (function (window, document, undefined) {
   // Enable strict mode
-  'use strict';
+  // 'use strict';
 
   // HTML shim|v it for old IE (IE9 will still need the HTML video tag workaround)
   document.createElement('picture');
 
-  var warn, eminpx, alwaysCheckWDescriptor, evalId;
+  var warn;
+  var eminpx;
+  var alwaysCheckWDescriptor;
+  var evalId;
   // local object for method references and testing exposure
   var pf = {};
   var isSupportTestReady = false;
@@ -110,7 +115,7 @@
   var regWDesc = /\s+\+?\d+(e\d+)?w/;
   var regSize = /(\([^)]+\))?\s*(.+)/;
   var setOptions = window.picturefillCFG;
-  /**
+  /* *
    * Shortcut property for https://w3c.github.io/webappsec/specs/mixedcontent/#restricts-mixed-content ( for easy overriding in tests )
    */
   // baseStyle also used by getEmValue (i.e.: width: 1em is important)
@@ -126,7 +131,7 @@
     'in': 96
   };
   var anchor = document.createElement('a');
-  /**
+  /* *
    * alreadyRun flag used for setOptions. is it true setOptions will reevaluate
    * @type {boolean}
    */
@@ -156,7 +161,7 @@
     }
   };
 
-  /**
+  /* *
    * simple memoize function:
    */
 
@@ -182,7 +187,7 @@
       c === '\u000D');  // carriage return
   }
 
-  /**
+  /* *
    * gets a mediaquery and returns a boolean or gets a css length and returns a number
    * @param css mediaqueries or css length
    * @returns {boolean|number}
@@ -215,7 +220,7 @@
         // interpret `max-` as <=
         /max-([a-z-\s]+):/g, 'e.$1<=',
 
-        //calc value
+        // calc value
         /calc([^)]+)/g, '($1)',
 
         // interpret css values
@@ -232,11 +237,11 @@
         if (length && (parsedLength = css.match(regLength))) {
           cssCache[css] = parsedLength[1] * units[parsedLength[2]];
         } else {
-          /*jshint evil:true */
+          /* jshint evil:true */
           try {
             cssCache[css] = new Function('e', buildStr(css))(units);
           } catch (e) { }
-          /*jshint evil:false */
+          /* jshint evil:false */
         }
       }
       return cssCache[css];
@@ -253,7 +258,7 @@
     return candidate;
   };
 
-  /**
+  /* *
    *
    * @param opt
    */
@@ -290,7 +295,7 @@
     }
   };
 
-  /**
+  /* *
    * outputs a warning for the developer
    * @param {message}
    * @type {Function}
@@ -330,7 +335,7 @@
   // test svg support
   types['image/svg+xml'] = document.implementation.hasFeature('http://www.w3.org/TR/SVG11/feature#Image', '1.1');
 
-  /**
+  /* *
    * updates the internal vW property with the current viewport width in px
    */
   function updateMetrics() {
@@ -461,7 +466,7 @@
     }
   }
 
-  /**
+  /* *
    * Srcset Parser
    * By Alex Bell |  MIT License
    *
@@ -502,7 +507,7 @@
       // 3. Let candidates be an initially empty source set.
       candidates = [];
 
-    /**
+    /* *
     * Adds descriptor properties to a candidate, pushes to the candidates array
     * @return undefined
     */
@@ -589,7 +594,7 @@
       }
     } // (close parseDescriptors fn)
 
-    /**
+    /* *
     * Tokenizes descriptor properties prior to parsing
     * Returns undefined.
     * (Again, this fn is defined before it is used, in order to pass JSHINT.
@@ -1016,7 +1021,7 @@
   pf.sel = pf.selShort;
   pf.cfg = cfg;
 
-  /**
+  /* *
    * Shortcut property for `devicePixelRatio` ( for easy overriding in tests )
    */
   pf.DPR = (DPR || 1);
@@ -1027,7 +1032,7 @@
 
   pf.setSize = noop;
 
-  /**
+  /* *
    * Gets a string and returns the absolute URL
    * @param src
    * @returns {String} absolute URL
@@ -1038,7 +1043,7 @@
     return anchor.href;
   });
 
-  /**
+  /* *
    * Gets a DOM element or document and a selctor and returns the found matches
    * Can be extended with jQuery/Sizzle for IE7 support
    * @param context
@@ -1049,7 +1054,7 @@
     return ('querySelector' in context) ? context.querySelectorAll(sel) : [];
   };
 
-  /**
+  /* *
    * Shortcut method for matchMedia ( for easy overriding in tests )
    * wether native or pf.mMQ is used will be decided lazy on first call
    * @returns {boolean}
@@ -1066,7 +1071,7 @@
     return pf.matchesMedia.apply(this, arguments);
   };
 
-  /**
+  /* *
    * A simplified matchMedia implementation for IE8 and IE9
    * handles only min-width/max-width with px or em values
    * @param media
@@ -1076,7 +1081,7 @@
     return media ? evalCSS(media) : true;
   };
 
-  /**
+  /* *
    * Returns the calculated length in css pixel from the given sourceSizeValue
    * http://dev.w3.org/csswg/css-values-3/#length-value
    * intended Spec mismatches:
@@ -1095,7 +1100,7 @@
     return value;
   };
 
-  /**
+  /* *
    * Takes a type string and checks if its supported
    */
 
@@ -1103,7 +1108,7 @@
     return (type) ? types[type] : true;
   };
 
-  /**
+  /* *
    * Parses a sourceSize into mediaCondition (media) and sourceSizeValue (length)
    * @param sourceSizeStr
    * @returns {*}
@@ -1123,7 +1128,7 @@
     return set.cands;
   };
 
-  /**
+  /* *
    * returns 1em in css px for html/body default size
    * function taken from respondjs
    * @returns {*|number}
@@ -1157,7 +1162,7 @@
     return eminpx || 16;
   };
 
-  /**
+  /* *
    * Takes a string of sizes and returns the width in pixels as a number
    */
   pf.calcListLength = function (sourceSizeListStr) {
@@ -1173,7 +1178,7 @@
     return sizeLengthCache[sourceSizeListStr];
   };
 
-  /**
+  /* *
    * Takes a candidate object with a srcset property in the form of url/
    * ex. 'images/pic-medium.png 1x, images/pic-medium-2x.png 2x' or
    *     'images/pic-medium.png 400w, images/pic-medium-2x.png 800w' or

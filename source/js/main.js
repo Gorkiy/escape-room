@@ -22,13 +22,22 @@ function checkFormState() {
   var inputs = form.querySelectorAll('input');
   var isReady = true;
 
-  for (let input of inputs) {
-    if (input.type === 'checkbox' && !input.checked) isReady = false;
-    if (!input.value) isReady = false;
-    if (input.id === 'email' && input.validity.typeMismatch) isReady = false;
+  for (var i = 0; i < inputs.length; i++) {
+    var input = inputs[i];
+
+    if (input.type === 'checkbox' && !input.checked) {
+      isReady = false;
+    }
+    if (!input.value) {
+      isReady = false;
+    }
+    if (input.id === 'email' && input.validity.typeMismatch) {
+      isReady = false;
+    }
   }
+
   return isReady;
-};
+}
 
 form.addEventListener('input', function (evt) {
   // Поведение кнопки отправки формы
@@ -71,9 +80,9 @@ form.addEventListener('submit', function (evt) {
   var question = document.getElementById('question').value;
 
   var userQuestion = {
-    name,
-    email,
-    question
+    name: name,
+    email: email,
+    question: question
   };
   localStorage.setItem('userQuestion', JSON.stringify(userQuestion));
 });
@@ -102,12 +111,12 @@ form.addEventListener('focusout', function (evt) {
 var askModal = document.querySelector('.modal--ask');
 var cityModal = document.querySelector('.modal--city');
 
-askLink.addEventListener('click', function (evt) {
+askLink.addEventListener('click', function () {
   askModal.classList.add('modal--show');
-  var inputName = document.getElementById('name').focus();
+  document.getElementById('name').focus();
 });
 
-locationLink.addEventListener('click', function (evt) {
+locationLink.addEventListener('click', function () {
   cityModal.classList.add('modal--show');
 });
 
@@ -115,16 +124,24 @@ askModal.addEventListener('click', function (evt) {
   var formBox = evt.target.closest('.modal-ask');
   var closeButton = evt.target.closest('.modal__close-button');
 
-  if (!formBox) askModal.classList.remove('modal--show');
-  if (closeButton) askModal.classList.remove('modal--show');
+  if (!formBox) {
+    askModal.classList.remove('modal--show');
+  }
+  if (closeButton) {
+    askModal.classList.remove('modal--show');
+  }
 });
 
 cityModal.addEventListener('click', function (evt) {
   var formBox = evt.target.closest('.modal-city');
   var closeButton = evt.target.closest('.modal__close-button');
 
-  if (!formBox) cityModal.classList.remove('modal--show');
-  if (closeButton) cityModal.classList.remove('modal--show');
+  if (!formBox) {
+    cityModal.classList.remove('modal--show');
+  }
+  if (closeButton) {
+    cityModal.classList.remove('modal--show');
+  }
 });
 
 document.addEventListener('keydown', function (evt) {
