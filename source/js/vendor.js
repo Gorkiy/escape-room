@@ -1,3 +1,23 @@
+/**
+ * Element.closest() polyfill
+ * https://developer.mozilla.org/en-US/docs/Web/API/Element/closest#Polyfill
+ */
+if (!Element.prototype.closest) {
+	if (!Element.prototype.matches) {
+		Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector;
+	}
+	Element.prototype.closest = function (s) {
+		var el = this;
+		var ancestor = this;
+		if (!document.documentElement.contains(el)) return null;
+		do {
+			if (ancestor.matches(s)) return ancestor;
+			ancestor = ancestor.parentElement;
+		} while (ancestor !== null);
+		return null;
+	};
+}
+
 /* ! picturefill - v3.0.2 - 2016-02-12
  * https://scottjehl.github.io/picturefill/
  * Copyright (c) 2016 https://github.com/scottjehl/picturefill/blob/master/Authors.txt; Licensed MIT
