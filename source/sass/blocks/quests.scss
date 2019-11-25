@@ -44,28 +44,27 @@
   color: white;
 }
 
-.quests__hit {
-  padding: 4px 12px 2px 30px;
+.quests__hit-box {
   position: absolute;
   top: 15px;
   right: 19px;
-  display: inline-block;
+  display: flex;
+  align-items: center;
   border: 2px solid rgba(242, 137, 15, 0.74);
   border-radius: 25px;
+}
+
+.quests__hit-icon {
+  fill: $accent-color;
+  margin-left: 10px;
+}
+
+.quests__hit {
+  padding: 4px 12px 2px 3px;
+  display: inline-block;
   font-weight: 500;
   font-size: 12px;
   line-height: 144%;
-
-  &::before {
-    position: absolute;
-    left: 12px;
-    content: "";
-    width: 14px;
-    height: 14px;
-    background-image: url("../img/icon-star.svg");
-    background-size: cover;
-    filter: invert(50%) sepia(71%) saturate(1682%) hue-rotate(1deg) brightness(107%) contrast(90%);
-  }
 }
 
 .quests__info {
@@ -75,6 +74,10 @@
   bottom: 12%;
   display: flex;
   flex-direction: column;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 144%;
+  color: $main-color;
 }
 
 .quests__name {
@@ -84,68 +87,42 @@
   line-height: 120%;
 }
 
-.quests__address,
-.quests__details {
-  font-weight: 500;
-  font-size: 13px;
-  line-height: 144%;
-  color: $main-color;
-}
-
 .quests__details {
   display: flex;
 }
 
-.quests__address {
-  margin-bottom: 5px;
-  padding-left: 20px;
-  position: relative;
+.quests__address-line,
+.quests__people-line,
+.quests__difficulty-line {
+  display: flex;
+  align-items: center;
+}
 
-  &::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: "";
-    width: 11px;
-    height: 14px;
-    background-image: url("../img/icon-location-small.svg");
-    background-size: cover;
-    filter: invert(50%) sepia(71%) saturate(1682%) hue-rotate(1deg) brightness(107%) contrast(90%);
-  }
+.quests__address-line {
+  margin-bottom: 5px;
+}
+
+.quests__people-line {
+  margin-right: 12px;
+}
+
+.quests__address {
+  margin-left: 9px;
+}
+
+.quests__address-icon {
+  fill: $accent-color;
 }
 
 .quests__people {
   position: relative;
-  padding-left: 20px;
+  margin-left: 8px;
   padding-right: 13px;
   border-right: 1px solid rgba(255, 255, 255, 0.5);
-
-  &::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: "";
-    width: 13px;
-    height: 16px;
-    background-image: url("../img/icon-person.svg");
-    background-size: cover;
-  }
 }
 
 .quests__difficulty {
-  position: relative;
-  padding-left: 32px;
-
-  &::before {
-    position: absolute;
-    top: 0;
-    left: 8px;
-    content: "";
-    width: 16px;
-    height: 16px;
-    background-image: url("../img/icon-puzzle.svg");
-    background-size: cover;
-  }
+  margin-left: 8px;
 }
 
 @media (max-width: $tablet-width) {

@@ -29,6 +29,14 @@
   color: #ffffff;
   border: none;
   background-color: $accent-color;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:disabled {
+    background-color: #b8b8b8;
+  }
 }
 
 .breadcrumb {
@@ -36,10 +44,6 @@
   font-size: 14px;
   line-height: 144%;
   color: $accent-color;
-}
-
-.button:disabled {
-  background-color: #b8b8b8;
 }
 
 .back-link {
@@ -78,6 +82,10 @@
     border-top: 5px solid transparent;
     border-bottom: 5px solid transparent;
     border-left: 7px solid white;
+  }
+
+  &:hover {
+    opacity: 0.8;
   }
 }
 

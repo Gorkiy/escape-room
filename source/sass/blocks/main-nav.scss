@@ -58,6 +58,7 @@
 
   .main-nav--closed {
     background: none;
+    height: 60px;
   }
 
   .main-nav--closed .main-nav__toggle::before {
@@ -115,6 +116,10 @@
   .main-nav--closed .menu__item {
     display: none;
   }
+
+  // .main-nav--closed .menu {
+  //   display: none;
+  // }
 
   .main-nav--closed .page-header__contacts {
     display: none;

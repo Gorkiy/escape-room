@@ -59,7 +59,13 @@
   .genre-list {
     position: relative;
     margin-left: -16px;
-    overflow-x: scroll;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+  }
+
+  .genre-list::-webkit-scrollbar {
+    display: none;
   }
 
   .genre-list__item-wrap {
