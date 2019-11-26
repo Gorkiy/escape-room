@@ -37,6 +37,10 @@
   &:disabled {
     background-color: #b8b8b8;
   }
+
+  &:disabled:hover {
+    opacity: 1;
+  }
 }
 
 .breadcrumb {
@@ -54,6 +58,7 @@
   padding: 0;
   display: inline-block;
   position: relative;
+  overflow: visible;
   font-weight: 500;
   font-size: 15px;
   line-height: 150%;
@@ -65,11 +70,12 @@
   &::before {
     position: absolute;
     content: "";
-    bottom: -8px;
     left: 0;
+    bottom: -8px;
     width: calc(100% + 13px);
     height: 2px;
     background-color: $accent-color;
+    overflow: auto;
   }
 
   &::after {
@@ -88,6 +94,17 @@
     opacity: 0.8;
   }
 }
+
+// .svg-blur {
+//   z-index: 2;
+//   pointer-events: none;
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   border: 1px solid red;
+//   width: 100%;
+//   height: 100%;
+// }
 
 @media (max-width: $mobile-width) {
   .title {

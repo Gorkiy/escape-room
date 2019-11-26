@@ -6,6 +6,7 @@ var askFormButton = document.querySelector('.ask-form__button');
 var askLink = document.querySelector('.page-footer__ask-link');
 var locationLink = document.querySelector('.page-header__location');
 var pageHeader = document.querySelector('.page-header');
+var pageContainer = document.querySelector('.page-container');
 
 // Поведение навигации
 navMain.classList.remove('main-nav--nojs');
@@ -114,21 +115,21 @@ var cityModal = document.querySelector('.modal--city');
 askLink.addEventListener('click', function () {
   askModal.classList.add('modal--show');
   document.getElementById('name').focus();
+  pageContainer.classList.add('page-container--fixed');
 });
 
 locationLink.addEventListener('click', function () {
   cityModal.classList.add('modal--show');
+  pageContainer.classList.add('page-container--fixed');
 });
 
 askModal.addEventListener('click', function (evt) {
   var formBox = evt.target.closest('.modal-ask');
   var closeButton = evt.target.closest('.modal__close-button');
 
-  if (!formBox) {
+  if (!formBox || closeButton) {
     askModal.classList.remove('modal--show');
-  }
-  if (closeButton) {
-    askModal.classList.remove('modal--show');
+    pageContainer.classList.remove('page-container--fixed');
   }
 });
 
@@ -136,11 +137,9 @@ cityModal.addEventListener('click', function (evt) {
   var formBox = evt.target.closest('.modal-city');
   var closeButton = evt.target.closest('.modal__close-button');
 
-  if (!formBox) {
+  if (!formBox || closeButton) {
     cityModal.classList.remove('modal--show');
-  }
-  if (closeButton) {
-    cityModal.classList.remove('modal--show');
+    pageContainer.classList.remove('page-container--fixed');
   }
 });
 
@@ -148,5 +147,6 @@ document.addEventListener('keydown', function (evt) {
   if (evt.keyCode === 27) {
     askModal.classList.remove('modal--show');
     cityModal.classList.remove('modal--show');
+    pageContainer.classList.remove('page-container--fixed');
   }
 });

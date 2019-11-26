@@ -7,6 +7,10 @@
   min-height: 100vh;
 }
 
+.page-container--fixed {
+  overflow: hidden;
+}
+
 .page-container__bg {
   position: fixed;
   z-index: -1;
@@ -36,6 +40,12 @@
 
   &--blur {
     filter: blur(90px);
+  }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .page-container__bg--blur {
+    display: none;
   }
 }
 
