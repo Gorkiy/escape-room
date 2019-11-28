@@ -2,6 +2,7 @@
   margin: 0 auto;
   width: 80%;
   margin-top: 40px;
+  max-width: $max-width;
 }
 
 .quest-select__title {
@@ -37,7 +38,7 @@
   }
 
   .quest-select__title {
-    margin-bottom: 40px;
+    margin-bottom: 42px;
   }
 
   .quest__back-link {

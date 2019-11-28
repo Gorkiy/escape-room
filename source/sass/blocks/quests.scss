@@ -56,7 +56,7 @@
 
 .quests__hit-icon {
   fill: $accent-color;
-  margin-left: 10px;
+  margin-left: 14px;
 }
 
 .quests__hit {
@@ -81,7 +81,7 @@
 }
 
 .quests__name {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   font-weight: bold;
   font-size: 24px;
   line-height: 120%;
@@ -96,10 +96,11 @@
 .quests__difficulty-line {
   display: flex;
   align-items: center;
+  margin-left: 2px;
 }
 
 .quests__address-line {
-  margin-bottom: 5px;
+  margin-bottom: 6px;
 }
 
 .quests__people-line {
@@ -145,7 +146,17 @@
   }
 
   .quests__item {
-    width: 100%;
     margin-right: 0;
+    margin-bottom: 16px;
+    width: 100%;
+    min-height: 232px;
+  }
+
+  .quests__info {
+    bottom: 9%;
+  }
+
+  .quests__hit-box {
+    right: 15px;
   }
 }

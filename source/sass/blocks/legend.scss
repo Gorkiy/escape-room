@@ -2,6 +2,7 @@
   @include list-reset();
   margin-top: 25px;
   display: flex;
+  flex-wrap: nowrap;
 }
 
 .legend__item {
@@ -9,6 +10,7 @@
   margin-right: 24px;
   padding-left: 22px;
   display: inline-block;
+  flex-shrink: 0;
   font-weight: 500;
   font-size: 12px;
   line-height: 144%;
@@ -36,22 +38,18 @@
 }
 
 @media (max-width: $mobile-width) {
+  .legend__item {
+    margin-right: 22px;
+  }
+}
+
+@media (max-width: 350px) {
   .legend {
-    justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   .legend__item {
-    margin-right: 0;
-
-    &::before {
-      position: absolute;
-      content: "";
-      left: 0;
-      top: 0;
-      width: 15px;
-      height: 15px;
-      border: 2px solid #c4c4c4;
-      border-radius: 3px;
-    }
+    margin-right: 10px;
+    font-size: 11px;
   }
 }

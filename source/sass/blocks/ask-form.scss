@@ -114,6 +114,7 @@
     background-color: #f2890f;
     border-radius: 4px;
     opacity: 0.5;
+    cursor: pointer;
   }
 
   &::after {
@@ -192,11 +193,10 @@
   opacity: 0.64;
 }
 
-
 @media (max-width: $mobile-width) {
   .ask-form__input,
   .ask-form__question {
-  max-width: 98%;
+    max-width: 98%;
   }
 
   .ask-form__heading {
@@ -210,6 +210,7 @@
   .ask-form__checkbox-label {
     line-height: 144%;
   }
+
   .ask-form__button-wrap {
     margin-bottom: 20px;
   }

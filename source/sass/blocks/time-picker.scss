@@ -4,7 +4,6 @@
   padding-left: 45px;
   display: flex;
   flex-wrap: wrap;
-  width: 90%;
   max-width: 950px;
 }
 
@@ -39,7 +38,7 @@
 
 @media (max-width: $mobile-width) {
   .time-picker {
-    margin-top: 44px;
+    margin-top: 46px;
     padding-left: 0;
     width: 100%;
   }

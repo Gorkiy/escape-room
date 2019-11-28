@@ -29,6 +29,7 @@
   color: #ffffff;
   border: none;
   background-color: $accent-color;
+  cursor: pointer;
 
   &:hover {
     opacity: 0.8;
@@ -36,6 +37,7 @@
 
   &:disabled {
     background-color: #b8b8b8;
+    cursor: auto;
   }
 
   &:disabled:hover {
@@ -138,6 +140,21 @@
       height: 10px;
       background-image: url("../img/icon-back.svg");
       background-size: cover;
+    }
+  }
+
+  .simple-button {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 150%;
+    border: none;
+
+    &::after {
+      top: 10px;
+      right: -15px;
+      border-top: 3px solid transparent;
+      border-bottom: 3px solid transparent;
+      border-left: 5px solid white;
     }
   }
 }
