@@ -4,7 +4,6 @@
   z-index: 999;
   left: 0;
   top: 0;
-  // bottom: 0;
   overflow: hidden;
   height: 100%;
   width: 100%;
@@ -28,7 +27,7 @@
 .modal__close-button {
   position: absolute;
   cursor: pointer;
-  top: 36px;
+  top: 38px;
   right: 32px;
   width: 18px;
   height: 18px;
@@ -71,12 +70,14 @@
 
 .modal__link {
   font-size: 17px;
-  line-height: 160%;
+  line-height: 170%;
   color: $main-color;
-  text-decoration: underline;
+  border-bottom: 1px solid $main-color;
+  opacity: 0.9;
 
   &:hover {
     color: #ffffff;
+    opacity: 1;
   }
 }
 
@@ -87,20 +88,18 @@
 }
 
 .modal-city__detect {
-  margin-bottom: 40px;
+  margin-bottom: 38px;
   display: flex;
   align-items: center;
 }
 
 .modal-city__detect-icon {
-  margin-right: 10px;
-}
-
-.modal__city-list {
-  margin-top: 20px;
+  margin-right: 12px;
 }
 
 .modal-city__choose-sign {
+  margin-bottom: 19px;
+  display: inline-block;
   font-size: 17px;
   line-height: 160%;
 }

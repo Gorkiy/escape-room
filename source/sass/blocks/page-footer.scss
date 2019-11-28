@@ -21,8 +21,9 @@
 }
 
 .page-footer__ask-link {
-  display: block;
   padding-bottom: 3px;
+  position: relative;
+  display: block;
   font-weight: 500;
   font-size: 12px;
   line-height: 144%;
@@ -31,8 +32,15 @@
   border-bottom: 1px $main-color dashed;
 
   &:hover {
+    padding-left: 10px;
     color: $accent-color;
     border-bottom: 1px $accent-color dashed;
+  }
+
+  &:hover::before {
+    position: absolute;
+    content: "?";
+    left: 0;
   }
 }
 
@@ -47,7 +55,7 @@
 
   .page-footer__ask-link {
     margin-bottom: 5px;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 16px;
     line-height: 19px;
     letter-spacing: 0.03em;

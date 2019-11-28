@@ -4,7 +4,7 @@
 }
 
 .ask-form__heading {
-  margin-bottom: 40px;
+  margin-bottom: 42px;
 }
 
 .ask-form__text {
@@ -22,7 +22,7 @@
 }
 
 .ask-form__button-wrap {
-  margin-bottom: 24px;
+  margin-bottom: 23px;
   align-self: center;
 }
 
@@ -37,6 +37,7 @@
 .ask-form__question {
   padding: 16px 24px;
   min-height: 52px;
+  max-width: 96%;
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 3px;
   font-weight: 500;
@@ -93,14 +94,6 @@
   }
 }
 
-.ask-form__checkbox {
-  width: 16px;
-  height: 16px;
-  background-color: red;
-  color: red;
-  border: 2px solid red;
-}
-
 .ask-form__check-row {
   padding-left: 24px;
   position: relative;
@@ -110,34 +103,48 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 144%;
-}
 
-.ask-form__checkbox-label::before {
-  position: absolute;
-  content: "";
-  left: 0;
-  top: 3px;
-  width: 16px;
-  height: 16px;
-  background-color: #f2890f;
-  border-radius: 4px;
-}
+  &::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 3px;
+    width: 16px;
+    height: 16px;
+    background-color: #f2890f;
+    border-radius: 4px;
+    opacity: 0.5;
+  }
 
-.ask-form__checkbox-label::after {
-  display: none;
-  position: absolute;
-  content: "";
-  left: 5px;
-  top: 5px;
-  width: 5px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 2px 2px 0;
-  transform: rotate(35deg);
+  &::after {
+    display: none;
+    position: absolute;
+    content: "";
+    left: 5px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(35deg);
+  }
 }
 
 .ask-form__checkbox:checked ~ .ask-form__checkbox-label::after {
   display: block;
+}
+
+.ask-form__checkbox:checked ~ .ask-form__checkbox-label::before {
+  opacity: 1;
+}
+
+.ask-form__check-link {
+  text-decoration: underline;
+  color: $main-color;
+
+  &:hover {
+    color: $accent-color;
+  }
 }
 
 .ask-form__question {
@@ -183,4 +190,27 @@
   line-height: 144%;
   color: $main-color;
   opacity: 0.64;
+}
+
+
+@media (max-width: $mobile-width) {
+  .ask-form__input,
+  .ask-form__question {
+  max-width: 98%;
+  }
+
+  .ask-form__heading {
+    margin-bottom: 40px;
+  }
+
+  .ask-form__text {
+    margin-bottom: 13px;
+  }
+
+  .ask-form__checkbox-label {
+    line-height: 144%;
+  }
+  .ask-form__button-wrap {
+    margin-bottom: 20px;
+  }
 }

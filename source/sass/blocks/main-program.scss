@@ -4,8 +4,8 @@
 }
 
 .main-program__title {
-  margin-bottom: 30px;
-  width: 48%;
+  margin-bottom: 32px;
+  width: 55%;
 }
 
 .main-program__description {
@@ -34,6 +34,16 @@
   background-color: #f39425;
 }
 
+@media (max-width: 1100px) {
+  .main-program__title {
+    width: 70%;
+  }
+
+  .main-program__description {
+    width: 60%;
+  }
+}
+
 @media (max-width: $tablet-width) {
   .main-program__title {
     width: 100%;
@@ -55,6 +65,7 @@
 
   .main-program__title {
     width: 100%;
+    margin-bottom: 35px;
   }
 
   .main-program__description {
@@ -62,7 +73,6 @@
   }
 
   .main-program__button {
-    margin-top: 5px;
     padding: 15px 32px;
     font-weight: 800;
     font-size: 14px;

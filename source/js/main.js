@@ -7,6 +7,42 @@ var askLink = document.querySelector('.page-footer__ask-link');
 var locationLink = document.querySelector('.page-header__location');
 var pageHeader = document.querySelector('.page-header');
 var pageContainer = document.querySelector('.page-container');
+var pageHeaderCity = document.querySelector('.page-header__city-link');
+
+// Установка города
+var city = localStorage.getItem('city') || 'Новосибирск';
+
+function setCity() {
+  var links = document.querySelectorAll('.city-list__link');
+  var link = null;
+  var linkActive = document.querySelector('.city-list__link--active');
+
+  for (var i = 0; i < links.length; i++) {
+    if (links[i].textContent === city) {
+      link = links[i];
+      break;
+    }
+  }
+
+  if (linkActive) {
+    linkActive.classList.remove('city-list__link--active');
+    linkActive.setAttribute('href', '#');
+  }
+  if (link) {
+    link.classList.add('city-list__link--active');
+    link.removeAttribute('href');
+  }
+}
+
+if (city) {
+  pageHeaderCity.textContent = city;
+  localStorage.setItem('city', city);
+} else {
+  pageHeaderCity.textContent = 'Новосибирск';
+  localStorage.setItem('city', 'Новосибирск');
+}
+
+setCity();
 
 // Поведение навигации
 navMain.classList.remove('main-nav--nojs');
@@ -136,10 +172,21 @@ askModal.addEventListener('click', function (evt) {
 cityModal.addEventListener('click', function (evt) {
   var formBox = evt.target.closest('.modal-city');
   var closeButton = evt.target.closest('.modal__close-button');
+  var cityLink = evt.target.closest('.city-list__link');
+  var cityLinkActive = document.querySelector('.city-list__link--active');
 
   if (!formBox || closeButton) {
     cityModal.classList.remove('modal--show');
     pageContainer.classList.remove('page-container--fixed');
+  }
+
+  if (cityLink) {
+    localStorage.setItem('city', cityLink.textContent);
+    cityLink.classList.add('city-list__link--active');
+    cityLink.removeAttribute('href');
+    cityLinkActive.classList.remove('city-list__link--active');
+    cityLinkActive.setAttribute('href', '#');
+    pageHeaderCity.textContent = localStorage.getItem('city');
   }
 });
 

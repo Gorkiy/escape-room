@@ -4,6 +4,7 @@
 
 .main-nav__list {
   @include list-reset();
+  width: 40%;
 }
 
 .main-nav__toggle {
@@ -29,6 +30,7 @@
 
   .main-nav__list {
     order: 2;
+    width: 100%;
   }
 
   .main-nav__toggle {
@@ -135,5 +137,11 @@
 
   .main-nav--nojs .menu__item {
     display: block;
+  }
+}
+
+@media (max-width: $tablet-width) and (max-height: 560px) {
+  .main-nav {
+    padding-top: 40px;
   }
 }

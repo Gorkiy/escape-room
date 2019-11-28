@@ -4,6 +4,7 @@
   width: 80%;
   display: flex;
   flex-wrap: wrap;
+  max-width: $max-width;
 }
 
 .order__form {
