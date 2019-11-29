@@ -30,6 +30,12 @@
   }
 }
 
+@media (max-width: $tablet-width) {
+  .quest__back-link {
+    margin-bottom: 10px;
+  }
+}
+
 @media (max-width: $mobile-width) {
   .quest-select {
     margin: 0;
